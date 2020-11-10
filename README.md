@@ -20,8 +20,10 @@ See 'Screenshot 2020-11-09 at 11.02.07 PM.png' in the Pictures folder.
 
 # Wireframes
 Wireframe for Desktop: 
+
 ![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wireframe%20for%20Desktop.png "Wireframe for Desktop")
 Wireframe for Mobile: 
+
 ![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wireframe%20for%20Mobile.png "Wireframe for Mobile")
 
 # MVP
