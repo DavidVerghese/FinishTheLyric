@@ -15,13 +15,14 @@ I'm using this API: https://lyricsovh.docs.apiary.io/#
 
 See 'Screenshot 2020-11-09 at 11.02.07 PM.png' in the Pictures folder.
 
-Inline-style: 
 ![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/API.png "Data From API")
 
 
 # Wireframes
-
-See 'Wireframe for Desktop' and 'Wireframe for Mobile' in the Pictures folder. 
+Wireframe for Desktop: 
+![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wireframe%20for%20Desktop.png "Wireframe for Desktop")
+Wireframe for Mobile: 
+![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wireframe%20for%20Mobile.png "Wireframe for Mobile")
 
 # MVP
 
@@ -43,7 +44,7 @@ Day 7: Work on cleaning up the code. Test project to make sure it works, includi
 
 # Priority Matrix
 
-See 'Priority Matrix Version Three' in the Pictures folder. 
+![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/priority%20matrix.png "Priority Matrix")
 
 # Timeframes
 
