@@ -37,6 +37,7 @@ Wireframe for Mobile:
 The intro: 
 
 ![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wire%20for%20Mobile%20Intro.png "Wireframe for Desktop Quiz Into")
+
 The quiz: 
 
 ![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wireframe%20for%20Mobile.png "Wireframe for Mobile Quiz")
