@@ -15,12 +15,13 @@ I'm using this API: https://lyricsovh.docs.apiary.io/#
 
 See 'Screenshot 2020-11-09 at 11.02.07 PM.png' in the Pictures folder.
 
+Inline-style: 
+![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/API.png "Data From API")
+
+
 # Wireframes
 
 See 'Wireframe for Desktop' and 'Wireframe for Mobile' in the Pictures folder. 
-
-![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/API.png")
-
 
 # MVP
 
