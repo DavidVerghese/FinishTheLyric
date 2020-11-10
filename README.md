@@ -1,4 +1,4 @@
-# FinishTheLyric
+# Finish The Lyric
 
 # App Title
 Finish the Lyric
