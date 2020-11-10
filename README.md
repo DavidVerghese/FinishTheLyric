@@ -33,7 +33,7 @@ The Minimum Viable Product would be a website that can pull short snippets of ly
 
 # Post MVP
 
-It would be cool to have a more advanced interface. For example, if I could add in clips of the songs, and possible animations in the style of a "text video" (like this: https://www.youtube.com/watch?v=iKzRIweSBLA). This could possibly require a second API. 
+I'd like to add in sound effects. I also might add a "host" that talks to the user. Eg, it might send a message like, "Wrong one, Alex".
 
 # Goals
 
