@@ -34,7 +34,17 @@ The results page:
 
 Wireframe for Mobile: 
 
-![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wireframe%20for%20Mobile.png "Wireframe for Mobile")
+The intro: 
+
+![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wire%20for%20Mobile%20Intro.png "Wireframe for Desktop Quiz Into")
+The quiz: 
+
+![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wireframe%20for%20Mobile.png "Wireframe for Mobile Quiz")
+
+The result:
+
+![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/Wireframe%20for%20Mobile%20Outro.png "Wireframe for Mobile Quiz Outro")
+
 
 # MVP
 
