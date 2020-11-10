@@ -34,8 +34,8 @@ Day 2: Research song lyric quizes, game shows, and consider what features to imp
 Day 3: Review Flexbox and CSS. Work on adding pictures and styling them with Flexbox and CSS. 
 Day 4: Write some more text for the quiz. Continue working on adding pictures and styling them with Flexbox and CSS. Get feedback from people I know on this project.
 Day 5: Work on tracking the final score the user recieves. Try to implement user feedback from yesterday.
-Day 6: Work on adding in sound effects. Test project to make sure it works, including on mobile.
-Day 7: Continue working on adding in sound effects/Finishing touches.
+Day 6: Work on adding in sound effects. Work on debugging the code.
+Day 7: Work on cleaning up the code. Test project to make sure it works, including on mobile.
 
 # Priority Matrix
 
@@ -55,8 +55,11 @@ See 'Priority Matrix Version Three' in the Pictures folder.
 | Writing Text | Moderate | 3hrs| |  |
 | Feedback | H | 3hrs|  |  |
 | Final Score | H | 2hrs|  |  |
-| Sound Effects | Moderate | 3hrs|  |  |
 | Incorporating Suggestions | H | 3hrs|  |  |
+| Sound Effects | Moderate | 3hrs|  |  |
+| Debugging the code | H | 3hrs|  |  |
 | Testing | H | 3hrs|  |  |
-| Total | H | 36 hours |  |  |
+| Cleaning up the code | Moderate | 2hrs|  |  |
+
+| Total | H | 41 hours |  |  |
 
