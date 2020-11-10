@@ -33,7 +33,7 @@ The Minimum Viable Product would be a website that can pull short snippets of ly
 
 # Post MVP
 
-I'd like to add in sound effects. I also might add a "host" that talks to the user. Eg, it might send a message like, "Wrong one, Alex".
+I'd like to add in sound effects. I also might add a "host" that talks to the user. Eg, it might send a message like, "Wrong one, Alex", or "On a roll, Alex", based on the user's name and how they are doing. 
 
 # Goals
 
