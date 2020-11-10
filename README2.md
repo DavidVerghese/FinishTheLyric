@@ -63,7 +63,7 @@ I'd like to add in sound effects. I also might add a "host" that talks to the us
 
 # Goals
 
-Day 1: Work on retrieving information from the API and getting it to display on the webpage. Fix a problem I'm currently having with the API where it only returns data the first time I call it.
+Day 1: Work on retrieving information from the API and getting it to display on the webpage. 
 Day 2: Research song lyric quizes, game shows, and consider what features to implement. Get data from the API to display on the screen. Work on creating a multiple choice option with HTML,JavaScript,CSS. 
 Day 3: Review Flexbox and CSS. Work on adding pictures and styling them with Flexbox and CSS. 
 Day 4: Write some more text for the quiz. Continue working on adding pictures and styling them with Flexbox and CSS. Get feedback from people I know on this project.
