@@ -50,17 +50,17 @@ The result:
 
 #### MVP 
 
-- Find and use external api 
-- Have the information from the api display on the webpage. 
-- Have a system to randomly select questions from a bank of questions.
-- Have a score counter
-- Have multiple choice questions, which the user can select answers from.
-- Style the webpage using CSS and Flexbox.
+- Take lyrics from the API and append them to the DOM
+- Take lyrics from the API and store them as values inside of object. For example, the object 'beatle' will have the property 'songLyric' with the value: 'I heard the news today, oh boy'. 
+- Have a system to randomly select objects from an array, and create questions based on the selected object when the user presses the 'next' button to move on to the next question. Make sure the user doesn't receive questions about the same object more than once. 
+- Have multiple choice questions, with one correct option, and three incorrect options. The options should be in a random order. 
 
 #### PostMVP  
 
-- Incorporate information about the user into the game instructions.
+- Have a score counter
+- Incorporate information about the user, such as their name, into the game instructions. 
 - Incorporate sound effects
+- Create a property called 'difficulty' inside each object, and assign it a value of 'easy', 'medium', or 'hard'. Create new arrays that store all the objects that have the same level of difficulty. 
 
 ## Project Schedule
 
@@ -68,8 +68,8 @@ The result:
 |---|---| ---|
 |Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |Nov 10| Project Approval | Incomplete
-|Nov 12| Core Application Structure (HTML, CSS, JS) | Incomplete
-|Nov 13| Build score counter(JS), add in sound effects | Incomplete
+|Nov 12| Core Application Structure (HTML, CSS, JS). Work on getting information from API. | Incomplete
+|Nov 13| Work on creating objects, and system of randomly selecting objects. | Incomplete
 |Nov 16| Finish MVP, get feedback from testers | Incomplete
 |Nov 17| Presentations | Incomplete
 
@@ -91,13 +91,11 @@ The result:
 | Flexbox | Moderate | 3hrs|  | |
 | Writing Text | Moderate | 3hrs| |  |
 | Feedback | H | 3hrs|  |  |
-| Final Score | H | 2hrs|  |  |
 | Incorporating Suggestions | H | 3hrs|  |  |
-| Sound Effects | Moderate | 3hrs|  |  |
 | Debugging the code | H | 3hrs|  |  |
 | Testing | H | 3hrs|  |  |
 | Cleaning up the code | Moderate | 2hrs|  |  |
-| Total | H | 41hrs|  |  |
+| Total | H | 36hrs|  |  |
 
 ## Code Snippet
 
