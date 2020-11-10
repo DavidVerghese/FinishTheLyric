@@ -60,6 +60,6 @@ See 'Priority Matrix Version Three' in the Pictures folder.
 | Debugging the code | H | 3hrs|  |  |
 | Testing | H | 3hrs|  |  |
 | Cleaning up the code | Moderate | 2hrs|  |  |
+| Total | H | 41hrs|  |  |
 
-| Total | H | 41 hours |  |  |
 
