@@ -51,10 +51,10 @@ The result:
 #### MVP 
 
 - Find and use external api 
-- Have the information from the api display on the webpage
-- Have a system to randomly select questions
+- Have the information from the api display on the webpage. 
+- Have a system to randomly select questions from a bank of questions.
 - Have a score counter
-- Have a multiple choice questions
+- Have multiple choice questions, which the user can select answers from.
 - Style the webpage using CSS and Flexbox.
 
 #### PostMVP  
