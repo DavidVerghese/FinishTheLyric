@@ -19,6 +19,9 @@ See 'Screenshot 2020-11-09 at 11.02.07 PM.png' in the Pictures folder.
 
 See 'Wireframe for Desktop' and 'Wireframe for Mobile' in the Pictures folder. 
 
+![alt text](https://github.com/DavidVergheseProgrammer/FinishTheLyric/blob/main/Folder/API.png")
+
+
 # MVP
 
 The Minimum Viable Product would be a website that can pull short snippets of lyrics from famous songs. It would have a multiple choice quiz, where users can pick what they think the last word is. It would display relevant pictures. For example, a question about what comes after "Just a city boy/ born and raised in south..." would display a picture of the band Journey. It would have a sound effect for if the user picked the right answer, and one for if the user picked the wrong answer. At the end of the quiz, the user will recieve a score, and a ranking (eg: "music trivia expert", "music ignoramous"). 
