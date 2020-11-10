@@ -59,7 +59,7 @@ The result:
 
 #### PostMVP  
 
-- Incorporate information about the user into the text of the game
+- Incorporate information about the user into the game instructions.
 - Incorporate sound effects
 
 ## Project Schedule
@@ -101,11 +101,6 @@ The result:
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-
-```
 
 ## Change Log
 
