@@ -1,15 +1,15 @@
+const attach = document.querySelector('#attach')
 
 const musicDiv = document.createElement('div')
 musicDiv.setAttribute('class', 'music')
-document.body.append(musicDiv)
+attach.append(musicDiv)
 
 async function dearPrudence(artist, song) {
-  //console.log('hi')
   const response = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${song}`)
   try {
     const lyrics = response.data.lyrics
     let firstLine = ''
-    for (i = 0; i < 42; i++) {
+    for (i = 0; i < 37; i++) {
       firstLine += lyrics[i]
     }
     const displayMusic = document.createElement('p')
@@ -21,9 +21,5 @@ async function dearPrudence(artist, song) {
   }
 }
 
-music('beatles', 'dear prudence')
-
-// document.querySelector('#clicked').addEventListener("click", function () {
-//   music('the beatles', 'hey jude')
-// })
+dearPrudence('the_beatles', 'dear prudence')
 
