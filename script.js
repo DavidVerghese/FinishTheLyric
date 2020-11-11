@@ -4,8 +4,15 @@ const musicDiv = document.createElement('div')
 musicDiv.setAttribute('class', 'music')
 attach.append(musicDiv)
 
+const attach2 = document.querySelector('#attach2')
 
-async function song(artist, song) {
+const musicDiv2 = document.createElement('div')
+musicDiv2.setAttribute('class', 'music')
+attach2.append(musicDiv2)
+
+
+
+async function beatles(artist, song) {
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   console.log(response.data.result.track.text)
   try {
@@ -55,6 +62,60 @@ async function song(artist, song) {
   }
 }
 
-song('Beatles', 'Penny Lane')
+beatles('Beatles', 'Penny Lane')
+
+async function nirvana(artist, song) {
+  const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
+  // console.log(response.data.result.track.text)
+  try {
+    const lyrics = response.data.result.track.text
+    console.log(lyrics)
+    let firstLine = ''
+    for (i = 345; i < 374; i++) {
+      firstLine += lyrics[i]
+    }
+
+    let correctAnswer = ''
+    for (i = 374; i < 408; i++) {
+      correctAnswer += lyrics[i]
+    }
+
+    const nirvanaObject = {
+      prompt: firstLine,
+      answer: correctAnswer,
+      wrong: ['mar-a-lago, al pacino, a mosquito', `and we're stupid, and contagious`, `aaahhhhh!!!`]
+    }
+    const displayMusic = document.createElement('p')
+    displayMusic.innerText = nirvanaObject.prompt
+    musicDiv2.append(displayMusic)
+
+    const quiz = document.createElement('ul')
+    const answer1 = document.createElement('li')
+    answer1.innerText = nirvanaObject.answer
+    quiz.append(answer1)
+    //musicDiv2.append(quiz)
+
+    const answer2 = document.createElement('li')
+    answer2.innerText = nirvanaObject.wrong[0]
+    quiz.append(answer2)
+    //musicDiv2.append(quiz)
+
+    const answer3 = document.createElement('li')
+    answer3.innerText = nirvanaObject.wrong[1]
+    quiz.append(answer3)
+
+    const answer4 = document.createElement('li')
+    answer4.innerText = nirvanaObject.wrong[2]
+    quiz.append(answer4)
+
+    musicDiv2.append(quiz)
+
+  }
+  catch (error) {
+    console.log("error!")
+  }
+}
+
+nirvana('Nirvana', 'Smells Like Teen Spirit')
 
 
