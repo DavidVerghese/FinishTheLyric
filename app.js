@@ -1,3 +1,5 @@
+
+
 const attach = document.querySelector('#attach')
 const musicDiv = document.createElement('div')
 musicDiv.setAttribute('class', 'music')
@@ -79,10 +81,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
 finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], musicDiv, "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif")
 
-finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 374, 395, 396, 408, ['a mojito', `a dorito`, `YEAH!`], musicDiv2, "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif")
+finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, ['outrageous', `sagacious`, `cretaceous`], musicDiv2, "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif")
 
 finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, ['Westeros', 'West Town Road', 'Westville Road'], musicDiv3, "https://media4.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif?cid=ecf05e4793d86e0ac4d7c3776f31f3445a8a54085c6ec850&rid=giphy.gif")
 
-finishTheLyric('Bill Withers', `Lean On Me`, 257, 314, 314, 320, ['know', 'have', 'steal'], musicDiv4, "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif")
+finishTheLyric('Bill Withers', `Lean On Me`, 257, 314, 314, 320, ['know', 'hide', 'steal'], musicDiv4, "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif")
 
 // Old Town Road
