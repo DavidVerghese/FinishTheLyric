@@ -44,3 +44,11 @@ li:hover {
   margin: 15px; 
 }
 
+#attach4 li {
+  margin: 25px; 
+}
+
+.next {
+  background-color: #659DBD;
+  font-size: 20px;
+}
