@@ -25,6 +25,11 @@ const musicDiv5 = document.createElement('div')
 musicDiv5.setAttribute('class', 'music')
 attach5.append(musicDiv5)
 
+const attach6 = document.querySelector('#attach6')
+const musicDiv6 = document.createElement('div')
+musicDiv6.setAttribute('class', 'music')
+attach6.append(musicDiv6)
+
 // from 'high_low game' homework
 // const numbers = [0, 1, 2, 3]
 function shuffle(list) {
@@ -131,5 +136,7 @@ finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, ['Westeros', 'West Tow
 finishTheLyric('Bill Withers', `Lean On Me`, 257, 314, 314, 320, ['know', 'hide', 'steal'], musicDiv4, "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif")
 
 finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, ['afford this', 'configure this', 'repair this'], musicDiv5, "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif")
+
+finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv6, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
 // Old Town Road
 
