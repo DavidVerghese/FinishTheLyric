@@ -163,8 +163,8 @@ finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, ['fast Tango', 
 
 finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, ['Yanni', 'TV', 'the Simpsons'], musicDiv8, "https://i.gifer.com/MnQZ.gif")
 
-finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv9, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
+finishTheLyric('The White Stripes', `Seven Nation Army`, 207, 247, 248, 258, ['paywall', 'brain fog', 'riddle'], musicDiv9, "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif")
 
-finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv10, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
+finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv10, "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif")
 // Old Town Road
 
