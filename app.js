@@ -121,7 +121,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
-          console.log("right!")
+          zeroAnswer.style.border = "10px solid green"
         })
       }
       else if (numbers2[x] == 1) {
@@ -129,7 +129,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         oneAnswer.innerText = musicianObject.wrongAnswers[0]
         quiz.append(oneAnswer)
         oneAnswer.addEventListener("click", function () {
-          console.log("wrong!")
+          zeroAnswer.style.border = "10px solid red"
         })
       }
       else if (numbers2[x] == 2) {
@@ -137,7 +137,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         twoAnswer.innerText = musicianObject.wrongAnswers[1]
         quiz.append(twoAnswer)
         twoAnswer.addEventListener("click", function () {
-          console.log("wrong!")
+          twoAnswer.style.border = "10px solid red"
         })
       }
       else {
@@ -145,7 +145,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         threeAnswer.innerText = musicianObject.wrongAnswers[2]
         quiz.append(threeAnswer)
         threeAnswer.addEventListener("click", function () {
-          console.log("wrong!")
+          threeAnswer.style.border = "10px solid red"
         })
       }
     }
