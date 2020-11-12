@@ -102,3 +102,16 @@ li:hover {
   background-color: #659DBD;
   font-size: 20px;
 }
+
+#question1Right {
+  font-size: 30px;
+  color: green;
+  float: left;
+  display: none;
+}
+
+#question1Wrong {
+  font-size: 30px;
+  float: right;
+  display: none;
+}

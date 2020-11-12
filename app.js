@@ -122,6 +122,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
           zeroAnswer.style.border = "10px solid green"
+          document.getElementById('question1Right').style.display = "inline"
         })
       }
       else if (numbers2[x] == 1) {
@@ -130,6 +131,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(oneAnswer)
         oneAnswer.addEventListener("click", function () {
           zeroAnswer.style.border = "10px solid red"
+          document.getElementById('question1Wrong').style.display = "inline"
         })
       }
       else if (numbers2[x] == 2) {
@@ -138,6 +140,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(twoAnswer)
         twoAnswer.addEventListener("click", function () {
           twoAnswer.style.border = "10px solid red"
+          document.getElementById('question1Wrong').style.display = "inline"
         })
       }
       else {
@@ -146,6 +149,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(threeAnswer)
         threeAnswer.addEventListener("click", function () {
           threeAnswer.style.border = "10px solid red"
+          document.getElementById('question1Wrong').style.display = "inline"
         })
       }
     }
