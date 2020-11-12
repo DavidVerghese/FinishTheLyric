@@ -57,6 +57,7 @@ function shuffle(list) {
   let currentIndex = list.length
   let temporaryValue = null
   let randomIndex = null
+  let i = 0;
   while (currentIndex != 0) {
     currentIndex -= 1
     let randomIndex = Math.floor(Math.random() * currentIndex)
@@ -64,7 +65,12 @@ function shuffle(list) {
     shuffledList[currentIndex] = shuffledList[randomIndex]
     shuffledList[randomIndex] = temporaryValue
   }
-  return (shuffledList)
+  newList = shuffledList
+  let fiftyFifty = Math.random()
+  if (fiftyFifty > 0.5) {
+    newList = shuffledList.reverse()
+  }
+  return (newList)
 }
 
 
