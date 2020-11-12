@@ -161,7 +161,7 @@ finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French'
 
 finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, ['fast Tango', 'waltz', 'flamenco'], musicDiv7, "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif")
 
-finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv8, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
+finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, ['Yanni', 'TV', 'the Simpsons'], musicDiv8, "https://i.gifer.com/MnQZ.gif")
 
 finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv9, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
 
