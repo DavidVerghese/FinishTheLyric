@@ -20,6 +20,24 @@ const musicDiv4 = document.createElement('div')
 musicDiv4.setAttribute('class', 'music')
 attach4.append(musicDiv4)
 
+// from 'high_low game' homework
+// const numbers = [0, 1, 2, 3]
+// function shuffle(list) {
+//   var shuffledList = list
+//   let currentIndex = list.length
+//   let temporaryValue = null
+//   let randomIndex = null
+//   while (currentIndex != 0) {
+//     currentIndex -= 1
+//     let randomIndex = Math.floor(Math.random() * currentIndex)
+//     let temporaryValue = shuffledList[currentIndex]
+//     shuffledList[currentIndex] = shuffledList[randomIndex]
+//     shuffledList[randomIndex] = temporaryValue
+//   }
+//   return (shuffledList)
+// }
+
+
 async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divContainer, gif) {
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   try {
@@ -29,14 +47,16 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
       firstLine += lyrics[i]
     }
     let firstWord = ''
-    for (i = c; i < d; i++) {
-      firstWord += lyrics[i]
+    for (r = c; r < d; r++) {
+      firstWord += lyrics[r]
     }
     const musicianObject = {
       prompt: firstLine + '...',
       correctAnswer: firstWord,
       wrongAnswers: wrongAnswersArray
     }
+
+    console.log(musicianObject.correctAnswer)
 
     const displayTitle = document.createElement('h2')
     displayTitle.innerText = (`${artist}, ${song}`)
@@ -56,23 +76,55 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
     const quiz = document.createElement('ul')
 
-    const answer1 = document.createElement('li')
-    answer1.innerText = musicianObject.correctAnswer
-    quiz.append(answer1)
+    // const answer1 = document.createElement('li')
+    // answer1.innerText = musicianObject.correctAnswer
+    // quiz.append(answer1)
 
-    const answer2 = document.createElement('li')
-    answer2.innerText = musicianObject.wrongAnswers[0]
-    quiz.append(answer2)
+    // const answer2 = document.createElement('li')
+    // answer2.innerText = musicianObject.wrongAnswers[0]
+    // quiz.append(answer2)
 
-    const answer3 = document.createElement('li')
-    answer3.innerText = musicianObject.wrongAnswers[1]
-    quiz.append(answer3)
+    // const answer3 = document.createElement('li')
+    // answer3.innerText = musicianObject.wrongAnswers[1]
+    // quiz.append(answer3)
 
-    const answer4 = document.createElement('li')
-    answer4.innerText = musicianObject.wrongAnswers[2]
-    quiz.append(answer4)
+    // const answer4 = document.createElement('li')
+    // answer4.innerText = musicianObject.wrongAnswers[2]
+    // quiz.append(answer4)
+
+    const numbers2 = [0, 1, 2, 3]
 
     divContainer.append(quiz)
+
+    for (x = 0; x < numbers2.length; x++) {
+      if (numbers2[x] == 0) {
+        console.log(x)
+        const zeroAnswer = document.createElement('li')
+        zeroAnswer.innerText = musicianObject.correctAnswer
+        quiz.append(zeroAnswer)
+      }
+      else if (numbers2[x] == 1) {
+        console.log(x)
+        const oneAnswer = document.createElement('li')
+        oneAnswer.innerText = musicianObject.wrongAnswers[0]
+        quiz.append(oneAnswer)
+      }
+      else if (numbers2[x] == 2) {
+        console.log(x)
+        const twoAnswer = document.createElement('li')
+        twoAnswer.innerText = musicianObject.wrongAnswers[1]
+        quiz.append(twoAnswer)
+      }
+      else {
+        console.log(x)
+        const threeAnswer = document.createElement('li')
+        threeAnswer.innerText = musicianObject.wrongAnswers[2]
+        quiz.append(threeAnswer)
+      }
+    }
+
+
+
   }
   catch (error) {
     console.log("error!")
@@ -88,3 +140,4 @@ finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, ['Westeros', 'West Tow
 finishTheLyric('Bill Withers', `Lean On Me`, 257, 314, 314, 320, ['know', 'hide', 'steal'], musicDiv4, "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif")
 
 // Old Town Road
+
