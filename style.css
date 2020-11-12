@@ -41,19 +41,16 @@ li:hover {
   background-color: #ff7f50;
 }
 
-#attach2 li:hover {
+#attach2 li:hover, #attach3 li:hover,#attach4 li:hover, #attach5 li:hover  {
   background-color: #C2B9B0;
 }
 
 #attach3 li {
   margin: 15px; 
-  background-color: #379683
+  background-color: #379683;
 }
 
-#attach3 li:hover {
-  margin: 15px; 
-  background-color:  #C2B9B0;
-}
+
 
 
 #attach4 li {
@@ -61,33 +58,35 @@ li:hover {
   background-color: #4056A1
 }
 
-#attach4 li:hover {
-  margin: 25px; 
-  background-color: #C2B9B0;
-}
 
 #attach5 li {
   margin: 25px; 
+  background-color: #78244C;
 }
 
 #attach6 li {
   margin: 25px; 
+  background-color #9D8D8F;
 }
 
 #attach7 li {
   margin: 25px; 
+  background-color: #1C3334;
 }
 
 #attach8 li {
   margin: 25px; 
+  background-color: #E98074;
 }
 
 #attach9 li {
   margin: 25px; 
+  background-color: #3AAFA9;
 }
 
 #attach10 li {
   margin: 25px; 
+  background-color: #474B4F;
 }
 
 .next {
