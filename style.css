@@ -103,15 +103,22 @@ li:hover {
   font-size: 20px;
 }
 
-#question1Right {
+#q1Right, #q2Right, #q3Right, #q4Right, #q5Right,
+#q6Right, #q7Right, #q8Right, #q9Right, #q10Right{
   font-size: 30px;
   color: green;
   float: left;
   display: none;
+  background-color: black;
+  width: 50px;
 }
 
-#question1Wrong {
+#q1Wrong, #q2Wrong, #q3Wrong, #q4Wrong, #q5Wrong,
+#q6Wrong, #q7Wrong, #q8Wrong, #q9Wrong, #q10Wrong {
   font-size: 30px;
   float: right;
   display: none;
+  background-color: black;
+  width: 50px;
 }
+

@@ -73,7 +73,7 @@ function shuffle(list) {
 }
 
 
-async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divContainer, gif) {
+async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divContainer, gif, id1, id2) {
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   try {
     const lyrics = response.data.result.track.text
@@ -122,7 +122,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
           zeroAnswer.style.border = "10px solid green"
-          document.getElementById('question1Right').style.display = "inline"
+
+          document.querySelector(id1).style.display = "inline"
         })
       }
       else if (numbers2[x] == 1) {
@@ -130,8 +131,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         oneAnswer.innerText = musicianObject.wrongAnswers[0]
         quiz.append(oneAnswer)
         oneAnswer.addEventListener("click", function () {
-          zeroAnswer.style.border = "10px solid red"
-          document.getElementById('question1Wrong').style.display = "inline"
+          oneAnswer.style.border = "10px solid red"
+          document.querySelector(id2).style.display = "inline"
         })
       }
       else if (numbers2[x] == 2) {
@@ -140,7 +141,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(twoAnswer)
         twoAnswer.addEventListener("click", function () {
           twoAnswer.style.border = "10px solid red"
-          document.getElementById('question1Wrong').style.display = "inline"
+          document.querySelector(id2).style.display = "inline"
         })
       }
       else {
@@ -149,7 +150,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(threeAnswer)
         threeAnswer.addEventListener("click", function () {
           threeAnswer.style.border = "10px solid red"
-          document.getElementById('question1Wrong').style.display = "inline"
+          document.querySelector(id2).style.display = "inline"
         })
       }
     }
@@ -160,24 +161,24 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
   }
 }
 
-finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], musicDiv, "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif")
+finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], musicDiv, "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", '#q1Right', '#q1Wrong')
 
-finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, ['outrageous', `sagacious`, `cretaceous`], musicDiv2, "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif")
+finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, ['outrageous', `sagacious`, `cretaceous`], musicDiv2, "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif", '#q2Right', '#q2Wrong')
 
-finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, ['Westeros', 'West Town Road', 'Westville Road'], musicDiv3, "https://media4.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif?cid=ecf05e4793d86e0ac4d7c3776f31f3445a8a54085c6ec850&rid=giphy.gif")
+finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, ['Westeros', 'West Town Road', 'Westville Road'], musicDiv3, "https://media4.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif?cid=ecf05e4793d86e0ac4d7c3776f31f3445a8a54085c6ec850&rid=giphy.gif", '#q3Right', '#q3Wrong')
 
-finishTheLyric('Bill Withers', `Lean On Me`, 257, 314, 314, 320, ['know', 'hide', 'steal'], musicDiv4, "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif")
+finishTheLyric('Bill Withers', `Lean On Me`, 257, 314, 314, 320, ['know', 'hide', 'steal'], musicDiv4, "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif", '#q4Right', '#q4Wrong')
 
-finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, ['afford this', 'configure this', 'repair this'], musicDiv5, "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif")
+finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, ['afford this', 'configure this', 'repair this'], musicDiv5, "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif", '#q5Right', '#q5Wrong')
 
-finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv6, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
+finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv6, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp", '#q6Right', '#q6Wrong')
 
-finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, ['fast Tango', 'waltz', 'flamenco'], musicDiv7, "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif")
+finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, ['fast Tango', 'waltz', 'flamenco'], musicDiv7, "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif", '#q7Right', '#q7Wrong')
 
-finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, ['Yanni', 'TV', 'the Simpsons'], musicDiv8, "https://i.gifer.com/MnQZ.gif")
+finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, ['Yanni', 'TV', 'the Simpsons'], musicDiv8, "https://i.gifer.com/MnQZ.gif", '#q8Right', '#q8Wrong')
 
-finishTheLyric('The White Stripes', `Seven Nation Army`, 207, 247, 248, 258, ['paywall', 'brain fog', 'riddle'], musicDiv9, "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif")
+finishTheLyric('The White Stripes', `Seven Nation Army`, 207, 247, 248, 258, ['paywall', 'brain fog', 'riddle'], musicDiv9, "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", '#q9Right', '#q9Wrong')
 
-finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, ['library', 'jail cell', 'slump'], musicDiv10, "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif")
+finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, ['library', 'jail cell', 'slump'], musicDiv10, "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", '#q10Right', '#q10Wrong')
 // Old Town Road
 
