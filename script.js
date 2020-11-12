@@ -11,7 +11,6 @@ musicDiv2.setAttribute('class', 'music')
 attach2.append(musicDiv2)
 
 
-
 async function beatles(artist, song) {
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   console.log(response.data.result.track.text)
@@ -54,6 +53,7 @@ async function beatles(artist, song) {
     const answer4 = document.createElement('li')
     answer4.innerText = beatles.wrong[2]
     quiz.append(answer4)
+    
     musicDiv.append(quiz)
 
   }

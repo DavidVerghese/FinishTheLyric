@@ -8,12 +8,12 @@ body {
 
 footer {
   background-color: #41B3A3;
-  height: 50px;
+  height: 100px;
   margin: 0;
 }
 header {
   background-color: #E8A87C;
-  height: 50px;
+  height: 100px;
   margin: 0;
 }
 img {
@@ -37,5 +37,10 @@ li:hover {
 
 
 #attach2 li {
+  margin: 5px; 
+}
+
+#attach3 li {
   margin: 15px; 
 }
+
