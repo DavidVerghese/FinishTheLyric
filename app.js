@@ -51,7 +51,6 @@ musicDiv10.setAttribute('class', 'music')
 attach10.append(musicDiv10)
 
 // from 'high_low game' homework
-// const numbers = [0, 1, 2, 3]
 function shuffle(list) {
   var shuffledList = list
   let currentIndex = list.length
@@ -92,8 +91,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
       wrongAnswers: wrongAnswersArray
     }
 
-    console.log(musicianObject.correctAnswer)
-
     const displayTitle = document.createElement('h2')
     displayTitle.innerText = (`${artist}, ${song}`)
     divContainer.append(displayTitle)
@@ -120,25 +117,21 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
     for (x = 0; x < numbers2.length; x++) {
       if (numbers2[x] == 0) {
-        console.log(x)
         const zeroAnswer = document.createElement('li')
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
       }
       else if (numbers2[x] == 1) {
-        console.log(x)
         const oneAnswer = document.createElement('li')
         oneAnswer.innerText = musicianObject.wrongAnswers[0]
         quiz.append(oneAnswer)
       }
       else if (numbers2[x] == 2) {
-        console.log(x)
         const twoAnswer = document.createElement('li')
         twoAnswer.innerText = musicianObject.wrongAnswers[1]
         quiz.append(twoAnswer)
       }
       else {
-        console.log(x)
         const threeAnswer = document.createElement('li')
         threeAnswer.innerText = musicianObject.wrongAnswers[2]
         quiz.append(threeAnswer)
