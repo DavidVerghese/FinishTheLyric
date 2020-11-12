@@ -22,20 +22,20 @@ attach4.append(musicDiv4)
 
 // from 'high_low game' homework
 // const numbers = [0, 1, 2, 3]
-// function shuffle(list) {
-//   var shuffledList = list
-//   let currentIndex = list.length
-//   let temporaryValue = null
-//   let randomIndex = null
-//   while (currentIndex != 0) {
-//     currentIndex -= 1
-//     let randomIndex = Math.floor(Math.random() * currentIndex)
-//     let temporaryValue = shuffledList[currentIndex]
-//     shuffledList[currentIndex] = shuffledList[randomIndex]
-//     shuffledList[randomIndex] = temporaryValue
-//   }
-//   return (shuffledList)
-// }
+function shuffle(list) {
+  var shuffledList = list
+  let currentIndex = list.length
+  let temporaryValue = null
+  let randomIndex = null
+  while (currentIndex != 0) {
+    currentIndex -= 1
+    let randomIndex = Math.floor(Math.random() * currentIndex)
+    let temporaryValue = shuffledList[currentIndex]
+    shuffledList[currentIndex] = shuffledList[randomIndex]
+    shuffledList[randomIndex] = temporaryValue
+  }
+  return (shuffledList)
+}
 
 
 async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divContainer, gif) {
@@ -76,23 +76,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
     const quiz = document.createElement('ul')
 
-    // const answer1 = document.createElement('li')
-    // answer1.innerText = musicianObject.correctAnswer
-    // quiz.append(answer1)
+    const numbers = [0, 1, 2, 3]
 
-    // const answer2 = document.createElement('li')
-    // answer2.innerText = musicianObject.wrongAnswers[0]
-    // quiz.append(answer2)
-
-    // const answer3 = document.createElement('li')
-    // answer3.innerText = musicianObject.wrongAnswers[1]
-    // quiz.append(answer3)
-
-    // const answer4 = document.createElement('li')
-    // answer4.innerText = musicianObject.wrongAnswers[2]
-    // quiz.append(answer4)
-
-    const numbers2 = [0, 1, 2, 3]
+    const numbers2 = shuffle(numbers)
 
     divContainer.append(quiz)
 
