@@ -120,25 +120,35 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         const zeroAnswer = document.createElement('li')
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
+        zeroAnswer.addEventListener("click", function () {
+          console.log("right!")
+        })
       }
       else if (numbers2[x] == 1) {
         const oneAnswer = document.createElement('li')
         oneAnswer.innerText = musicianObject.wrongAnswers[0]
         quiz.append(oneAnswer)
+        oneAnswer.addEventListener("click", function () {
+          console.log("wrong!")
+        })
       }
       else if (numbers2[x] == 2) {
         const twoAnswer = document.createElement('li')
         twoAnswer.innerText = musicianObject.wrongAnswers[1]
         quiz.append(twoAnswer)
+        twoAnswer.addEventListener("click", function () {
+          console.log("wrong!")
+        })
       }
       else {
         const threeAnswer = document.createElement('li')
         threeAnswer.innerText = musicianObject.wrongAnswers[2]
         quiz.append(threeAnswer)
+        threeAnswer.addEventListener("click", function () {
+          console.log("wrong!")
+        })
       }
     }
-
-
 
   }
   catch (error) {
