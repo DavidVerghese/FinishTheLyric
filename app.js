@@ -30,6 +30,26 @@ const musicDiv6 = document.createElement('div')
 musicDiv6.setAttribute('class', 'music')
 attach6.append(musicDiv6)
 
+const attach7 = document.querySelector('#attach7')
+const musicDiv7 = document.createElement('div')
+musicDiv7.setAttribute('class', 'music')
+attach7.append(musicDiv7)
+
+const attach8 = document.querySelector('#attach8')
+const musicDiv8 = document.createElement('div')
+musicDiv8.setAttribute('class', 'music')
+attach8.append(musicDiv8)
+
+const attach9 = document.querySelector('#attach9')
+const musicDiv9 = document.createElement('div')
+musicDiv9.setAttribute('class', 'music')
+attach9.append(musicDiv9)
+
+const attach10 = document.querySelector('#attach10')
+const musicDiv10 = document.createElement('div')
+musicDiv10.setAttribute('class', 'music')
+attach10.append(musicDiv10)
+
 // from 'high_low game' homework
 // const numbers = [0, 1, 2, 3]
 function shuffle(list) {
@@ -138,5 +158,13 @@ finishTheLyric('Bill Withers', `Lean On Me`, 257, 314, 314, 320, ['know', 'hide'
 finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, ['afford this', 'configure this', 'repair this'], musicDiv5, "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif")
 
 finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv6, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
+
+finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, ['fast Tango', 'waltz', 'flamenco'], musicDiv7, "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif")
+
+finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv8, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
+
+finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv9, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
+
+finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv10, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp")
 // Old Town Road
 
