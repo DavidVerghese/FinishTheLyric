@@ -71,19 +71,19 @@ async function nirvana(artist, song) {
     const lyrics = response.data.result.track.text
     console.log(lyrics)
     let firstLine = ''
-    for (i = 345; i < 374; i++) {
+    for (i = 374; i < 395; i++) {
       firstLine += lyrics[i]
     }
 
     let correctAnswer = ''
-    for (i = 374; i < 408; i++) {
+    for (i = 396; i < 408; i++) {
       correctAnswer += lyrics[i]
     }
 
     const nirvanaObject = {
       prompt: firstLine,
       answer: correctAnswer,
-      wrong: ['mar-a-lago, al pacino, a mosquito', `and we're stupid, and contagious`, `aaahhhhh!!!`]
+      wrong: ['a mojito', `a dorito`, `yeaaahhhhh!!!`]
     }
     const displayMusic = document.createElement('p')
     displayMusic.innerText = nirvanaObject.prompt
