@@ -38,14 +38,32 @@ li:hover {
 
 #attach2 li {
   margin: 5px; 
+  background-color: #ff7f50;
+}
+
+#attach2 li:hover {
+  background-color: #C2B9B0;
 }
 
 #attach3 li {
   margin: 15px; 
+  background-color: #379683
 }
+
+#attach3 li:hover {
+  margin: 15px; 
+  background-color:  #C2B9B0;
+}
+
 
 #attach4 li {
   margin: 25px; 
+  background-color: #4056A1
+}
+
+#attach4 li:hover {
+  margin: 25px; 
+  background-color: #C2B9B0;
 }
 
 #attach5 li {
