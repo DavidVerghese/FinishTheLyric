@@ -41,7 +41,16 @@ li:hover {
   background-color: #ff7f50;
 }
 
-#attach2 li:hover, #attach3 li:hover,#attach4 li:hover, #attach5 li:hover  {
+#attach2 li:hover,
+#attach3 li:hover,
+#attach4 li:hover, 
+#attach5 li:hover,
+#attach6 li:hover,
+#attach7 li:hover,
+#attach8 li:hover,
+#attach9 li:hover,
+#attach10 li:hover
+ {
   background-color: #C2B9B0;
 }
 
