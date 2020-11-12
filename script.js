@@ -53,7 +53,7 @@ async function beatles(artist, song) {
     const answer4 = document.createElement('li')
     answer4.innerText = beatles.wrong[2]
     quiz.append(answer4)
-    
+
     musicDiv.append(quiz)
 
   }
