@@ -155,6 +155,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         })
       }
     }
+    console
+
+    divContainer.insertAdjacentHTML('beforeend', '<a href="#second"><button class="next">Next</button></a> <hr>')
+    console.log(divContainer.innerHTML)
 
   }
   catch (error) {
@@ -163,10 +167,15 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 }
 
 function removeQuestion() {
-  const remove = document.querySelector('.music')
-  while (remove.lastChild) {
-    remove.removeChild(remove.lastChild)
+  const remove = document.querySelectorAll('.music')
+
+  for (p = 0; p < remove.length; p++) {
+    console.log(remove[p])
+    remove[p].innerHTML = ''
   }
+  // while (remove.lastChild) {
+  //   remove.removeChild(remove.lastChild)
+  // }
 }
 
 document.getElementById('trigger1').addEventListener("click", function () {
@@ -211,25 +220,4 @@ document.getElementById('trigger10').addEventListener("click", function () {
 })
 
 
-
-// finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], musicDiv, "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", '#q1Right', '#q1Wrong')
-
-// finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, ['outrageous', `sagacious`, `cretaceous`], musicDiv2, "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif", '#q2Right', '#q2Wrong')
-
-// finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, ['Westeros', 'West Town Road', 'Westville Road'], musicDiv3, "https://media4.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif?cid=ecf05e4793d86e0ac4d7c3776f31f3445a8a54085c6ec850&rid=giphy.gif", '#q3Right', '#q3Wrong')
-
-// finishTheLyric('Bill Withers', `Lean On Me`, 257, 314, 314, 320, ['know', 'hide', 'steal'], musicDiv4, "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif", '#q4Right', '#q4Wrong')
-
-// finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, ['afford this', 'configure this', 'repair this'], musicDiv5, "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif", '#q5Right', '#q5Wrong')
-
-// finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, ['riddles', 'French', 'stats'], musicDiv6, "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp", '#q6Right', '#q6Wrong')
-
-// finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, ['fast Tango', 'waltz', 'flamenco'], musicDiv7, "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif", '#q7Right', '#q7Wrong')
-
-// finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, ['Yanni', 'TV', 'the Simpsons'], musicDiv8, "https://i.gifer.com/MnQZ.gif", '#q8Right', '#q8Wrong')
-
-// finishTheLyric('The White Stripes', `Seven Nation Army`, 207, 247, 248, 258, ['paywall', 'brain fog', 'riddle'], musicDiv9, "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", '#q9Right', '#q9Wrong')
-
-// finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, ['library', 'jail cell', 'slump'], musicDiv10, "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", '#q10Right', '#q10Wrong')
-// Old Town Road
 
