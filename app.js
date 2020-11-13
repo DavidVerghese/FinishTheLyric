@@ -172,10 +172,12 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         })
       }
     }
-    console
 
-    divContainer.insertAdjacentHTML('beforeend', `<a href="#second"><button class="next">${buttonText}</button></a> <hr>`)
-    console.log(divContainer.innerHTML)
+
+    const nextButton = document.createElement('button')
+    nextButton.innerText = buttonText
+    nextButton.setAttribute('class', 'next')
+    divContainer.append(nextButton)
 
   }
   catch (error) {
