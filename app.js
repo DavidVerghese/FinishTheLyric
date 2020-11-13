@@ -1,4 +1,4 @@
-
+const introScreen = document.querySelector('#startScreen')
 
 const attach = document.querySelector('#attach')
 const musicDiv = document.createElement('div')
@@ -72,6 +72,17 @@ function shuffle(list) {
   return (newList)
 }
 
+function startScreen() {
+  removeQuestion()
+  const displayGif = document.createElement('img')
+  displayGif.setAttribute('src', `https://media2.giphy.com/media/l41lGtNHF5etg5B0Q/giphy.gif`)
+  introScreen.append(displayGif)
+  const introText = document.createElement('p')
+  introText.innerText = `Are you ready to test your music trivia knowledge?`
+  introScreen.append(introText)
+  introScreen.insertAdjacentHTML(`beforeend`, `<a href="#first"><button class="next">Start the quiz</button></a>`)
+}
+startScreen()
 
 async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divContainer, gif, id1, id2) {
   removeQuestion()
@@ -157,7 +168,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
     }
     console
 
-    divContainer.insertAdjacentHTML('beforeend', '<a href="#second"><button class="next">Next</button></a> <hr>')
+    divContainer.insertAdjacentHTML('beforeend', `<a href="#second"><button class="next">Next</button></a> <hr>`)
     console.log(divContainer.innerHTML)
 
   }
@@ -173,10 +184,12 @@ function removeQuestion() {
     console.log(remove[p])
     remove[p].innerHTML = ''
   }
-  // while (remove.lastChild) {
-  //   remove.removeChild(remove.lastChild)
-  // }
+  introScreen.innerHTML = ''
 }
+
+document.getElementById('trigger0').addEventListener("click", function () {
+  startScreen()
+})
 
 document.getElementById('trigger1').addEventListener("click", function () {
   finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], musicDiv, "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", '#q1Right', '#q1Wrong')
