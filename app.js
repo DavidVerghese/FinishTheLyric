@@ -185,6 +185,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           document.querySelector(id1).style.display = "inline"
           document.querySelector(id2).style.display = "none"
+          console.log(zeroAnswer)
         })
       }
       else if (numbers2[x] == 1) {
@@ -207,9 +208,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(twoAnswer)
         twoAnswer.addEventListener("click", function () {
           twoAnswer.style.border = "10px solid red"
+          zeroAnswer.style.border = "0px solid green"
           oneAnswer.style.border = "0px solid green"
           threeAnswer.style.border = "0px solid green"
-          fourAnswer.style.border = "0px solid green"
 
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
@@ -221,9 +222,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         quiz.append(threeAnswer)
         threeAnswer.addEventListener("click", function () {
           threeAnswer.style.border = "10px solid red"
+          zeroAnswer.style.border = "0px solid green"
           oneAnswer.style.border = "0px solid green"
           twoAnswer.style.border = "0px solid green"
-          fourAnswer.style.border = "0px solid green"
 
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
