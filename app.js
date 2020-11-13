@@ -53,8 +53,10 @@ musicDiv10.setAttribute('class', 'music')
 attach10.append(musicDiv10)
 
 // Creating the algorithim that creates a random array of numbers. 
-// this controls the order of the multiple choice questions
+// this controls the order of the multiple choice choices, and the order in which 
+// questions appear on the page
 // from 'high_low game' homework
+
 function shuffle(list) {
   var shuffledList = list
   let currentIndex = list.length
@@ -92,17 +94,23 @@ function startScreen() {
   startButton.setAttribute('class', 'next')
   introScreen.append(startButton)
   startButton.addEventListener("click", function () {
-    finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], musicDiv, "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", '#q1Right', '#q1Wrong', 'Next')
+    introScreen.style.display = 'none'
   })
 }
-startScreen()
 
 // the function that creates the ten questions 
 
 async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divContainer, gif, id1, id2, buttonText, buttonDestination) {
-  //removeQuestion()
+
+  //getting the data from the API
+
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   try {
+
+    //console.log(document.querySelector('main').style.display)
+
+    // selecting which parts of the lyrics we want to append to the DOM 
+
     const lyrics = response.data.result.track.text
     let firstLine = ''
     for (i = a; i < b; i++) {
@@ -117,6 +125,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
       correctAnswer: firstWord,
       wrongAnswers: wrongAnswersArray
     }
+
+    // creating the title, gif, etc 
 
     const displayTitle = document.createElement('h2')
     displayTitle.innerText = (`${artist}, ${song}`)
@@ -192,6 +202,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
     nextLink.appendChild(nextButton)
     divContainer.append(nextLink)
     nextButton.addEventListener("click", function () {
+
+      divContainer.style.display = "none"
+      document.querySelector(id1).style.display = "none"
+      document.querySelector(id2).style.display = "none"
       //finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, ['outrageous', `sagacious`, `cretaceous`], musicDiv2, "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif", '#q2Right', '#q2Wrong', 'Next')
     })
 
@@ -221,7 +235,7 @@ const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong',
 const linksForNextButton = ['#second', '#third', '#fourth', '#fifth', '#sixth', '#seventh', '#eighth', '#ninth', '#tenth', '#intro']
 
 for (c = 0; c < questionOrder.length; c++) {
-  console.log(questionOrder[c])
+
   if (c === 0) {
     finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
