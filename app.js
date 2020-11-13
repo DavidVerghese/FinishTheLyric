@@ -82,7 +82,8 @@ function shuffle(list) {
 // the function that creates the start screen 
 
 function startScreen() {
-  removeQuestion()
+  //document.querySelector('#second').style.display = 'inline-block'
+  //removeQuestion()
   const displayGif = document.createElement('img')
   displayGif.setAttribute('src', `https://media2.giphy.com/media/l41lGtNHF5etg5B0Q/giphy.gif`)
   introScreen.append(displayGif)
@@ -98,6 +99,18 @@ function startScreen() {
   })
 }
 
+// document.querySelector('#attach').style.display = "none"
+// document.querySelector('#attach2').style.display = "none"
+// document.querySelector('#attach3').style.display = "none"
+// document.querySelector('#attach4').style.display = "none"
+// document.querySelector('#attach5').style.display = "none"
+// document.querySelector('#attach6').style.display = "none"
+// document.querySelector('#attach7').style.display = "none"
+// document.querySelector('#attach8').style.display = "none"
+// document.querySelector('#attach9').style.display = "none"
+// document.querySelector('#attach10').style.display = "none"
+
+
 // the function that creates the ten questions 
 
 async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divContainer, gif, id1, id2, buttonText, buttonDestination) {
@@ -107,7 +120,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   try {
 
-    //console.log(document.querySelector('main').style.display)
+
 
     // selecting which parts of the lyrics we want to append to the DOM 
 
@@ -144,6 +157,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
     displayMusic.innerText = musicianObject.prompt
     divContainer.append(displayMusic)
 
+    //divContainer.style.display = 'none'
+
     const quiz = document.createElement('ul')
 
     const numbers = [0, 1, 2, 3]
@@ -152,42 +167,66 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
     divContainer.append(quiz)
 
+    const zeroAnswer = document.createElement('li')
+    const oneAnswer = document.createElement('li')
+    const twoAnswer = document.createElement('li')
+    const threeAnswer = document.createElement('li')
+
     for (x = 0; x < numbers2.length; x++) {
       if (numbers2[x] == 0) {
-        const zeroAnswer = document.createElement('li')
+        //const zeroAnswer = document.createElement('li')
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
           zeroAnswer.style.border = "10px solid green"
+          oneAnswer.style.border = "0px solid green"
+          twoAnswer.style.border = "0px solid green"
+          threeAnswer.style.border = "0px solid green"
 
           document.querySelector(id1).style.display = "inline"
+          document.querySelector(id2).style.display = "none"
         })
       }
       else if (numbers2[x] == 1) {
-        const oneAnswer = document.createElement('li')
+        //const oneAnswer = document.createElement('li')
         oneAnswer.innerText = musicianObject.wrongAnswers[0]
         quiz.append(oneAnswer)
         oneAnswer.addEventListener("click", function () {
           oneAnswer.style.border = "10px solid red"
+          zeroAnswer.style.border = "0px solid green"
+          twoAnswer.style.border = "0px solid green"
+          threeAnswer.style.border = "0px solid green"
+
           document.querySelector(id2).style.display = "inline"
+          document.querySelector(id1).style.display = "none"
         })
       }
       else if (numbers2[x] == 2) {
-        const twoAnswer = document.createElement('li')
+        //const twoAnswer = document.createElement('li')
         twoAnswer.innerText = musicianObject.wrongAnswers[1]
         quiz.append(twoAnswer)
         twoAnswer.addEventListener("click", function () {
           twoAnswer.style.border = "10px solid red"
+          oneAnswer.style.border = "0px solid green"
+          threeAnswer.style.border = "0px solid green"
+          fourAnswer.style.border = "0px solid green"
+
           document.querySelector(id2).style.display = "inline"
+          document.querySelector(id1).style.display = "none"
         })
       }
       else {
-        const threeAnswer = document.createElement('li')
+        //const threeAnswer = document.createElement('li')
         threeAnswer.innerText = musicianObject.wrongAnswers[2]
         quiz.append(threeAnswer)
         threeAnswer.addEventListener("click", function () {
           threeAnswer.style.border = "10px solid red"
+          oneAnswer.style.border = "0px solid green"
+          twoAnswer.style.border = "0px solid green"
+          fourAnswer.style.border = "0px solid green"
+
           document.querySelector(id2).style.display = "inline"
+          document.querySelector(id1).style.display = "none"
         })
       }
     }
@@ -233,10 +272,12 @@ const divOrder = [musicDiv, musicDiv2, musicDiv3, musicDiv4, musicDiv5, musicDiv
 const rightAnswer = ['#q1Right', '#q2Right', '#q3Right', '#q4Right', '#q5Right', '#q6Right', '#q7Right', '#q8Right', '#q9Right', '#q10Right']
 const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong', '#q6Wrong', '#q7Wrong', '#q8Wrong', '#q9Wrong', '#q10Wrong']
 const linksForNextButton = ['#second', '#third', '#fourth', '#fifth', '#sixth', '#seventh', '#eighth', '#ninth', '#tenth', '#intro']
+const idsOfDivContainers = ['#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach']
 
 for (c = 0; c < questionOrder.length; c++) {
 
   if (c === 0) {
+
     finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
   else if (c === 1) {
@@ -264,6 +305,6 @@ for (c = 0; c < questionOrder.length; c++) {
     finishTheLyric('The White Stripes', `Seven Nation Army`, 207, 247, 248, 258, ['paywall', 'brain fog', 'riddle'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
   else {
-    finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Back to start', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
 }
