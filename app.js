@@ -80,7 +80,13 @@ function startScreen() {
   const introText = document.createElement('p')
   introText.innerText = `Are you ready to test your music trivia knowledge?`
   introScreen.append(introText)
-  introScreen.insertAdjacentHTML(`beforeend`, `<a href="#first"><button class="next">Start the quiz</button></a>`)
+  const startButton = document.createElement('button')
+  startButton.innerText = 'Start the quiz!'
+  startButton.setAttribute('class', 'next')
+  introScreen.append(startButton)
+  startButton.addEventListener("click", function () {
+    finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, ['his photo collection', 'haircuts', 'paintings'], musicDiv, "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", '#q1Right', '#q1Wrong', 'Next')
+  })
 }
 startScreen()
 
