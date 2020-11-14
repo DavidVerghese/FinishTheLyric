@@ -78,6 +78,11 @@ function shuffle(list) {
   return (newList)
 }
 
+let scoreValue = 0;
+
+const scoreCounter = document.createElement('h2');
+scoreCounter.innerText = `Final score: ${scoreValue}/10`;
+document.body.append(scoreCounter);
 
 // the function that creates the start screen 
 
@@ -183,6 +188,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           // const correctAnswerResponse = document.createElement('p')
           answerResponse.innerText = 'Good job!'
           divContainer.append(answerResponse)
+
+          scoreValue = scoreValue + 1;
+          scoreCounter.innerText = `score: ${scoreValue}/10`;
         })
       }
       else if (numbers2[x] == 1) {
@@ -200,6 +208,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           divContainer.append(answerResponse)
+
+          scoreValue = scoreValue - 1;
+          scoreCounter.innerText = `score: ${scoreValue}/10`;
+
         })
       }
       else if (numbers2[x] == 2) {
@@ -217,6 +229,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           divContainer.append(answerResponse)
+
+          scoreValue = scoreValue - 1;
+          scoreCounter.innerText = `score: ${scoreValue}/10`;
+
         })
       }
       else {
@@ -234,6 +250,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           divContainer.append(answerResponse)
+
+          scoreValue = scoreValue - 1;
+          scoreCounter.innerText = `score: ${scoreValue}/10`;
         })
       }
     }
