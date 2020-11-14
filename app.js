@@ -55,7 +55,7 @@ attach10.append(musicDiv10)
 // Creating the algorithim that creates a random array of numbers. 
 // this controls the order of the multiple choice choices, and the order in which 
 // questions appear on the page
-// from 'high_low game' homework
+// This is based on the "shuffle card" function from 'high_low game' homework
 
 function shuffle(list) {
   var shuffledList = list
@@ -82,13 +82,12 @@ let scoreValue = 0;
 
 const scoreCounter = document.createElement('h2');
 scoreCounter.innerText = `Final score: ${scoreValue}/10`;
-document.body.append(scoreCounter);
+const finalScoreAttacher = document.querySelector('#finalScore')
+finalScoreAttacher.append(scoreCounter);
 
 // the function that creates the start screen 
 
 function startScreen() {
-  //document.querySelector('#second').style.display = 'inline-block'
-  //removeQuestion()
   const displayGif = document.createElement('img')
   displayGif.setAttribute('src', `https://media2.giphy.com/media/l41lGtNHF5etg5B0Q/giphy.gif`)
   introScreen.append(displayGif)
@@ -173,7 +172,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
     for (x = 0; x < numbers2.length; x++) {
       if (numbers2[x] == 0) {
-        //const zeroAnswer = document.createElement('li')
+        
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
@@ -185,7 +184,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id1).style.display = "inline"
           document.querySelector(id2).style.display = "none"
 
-          // const correctAnswerResponse = document.createElement('p')
           answerResponse.innerText = 'Good job!'
           divContainer.append(answerResponse)
 
@@ -194,7 +192,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
         })
       }
       else if (numbers2[x] == 1) {
-        //const oneAnswer = document.createElement('li')
         oneAnswer.innerText = musicianObject.wrongAnswers[0]
         quiz.append(oneAnswer)
         oneAnswer.addEventListener("click", function () {
@@ -209,13 +206,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           divContainer.append(answerResponse)
 
-          scoreValue = scoreValue - 1;
-          scoreCounter.innerText = `score: ${scoreValue}/10`;
-
         })
       }
       else if (numbers2[x] == 2) {
-        //const twoAnswer = document.createElement('li')
         twoAnswer.innerText = musicianObject.wrongAnswers[1]
         quiz.append(twoAnswer)
         twoAnswer.addEventListener("click", function () {
@@ -230,13 +223,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           divContainer.append(answerResponse)
 
-          scoreValue = scoreValue - 1;
-          scoreCounter.innerText = `score: ${scoreValue}/10`;
-
         })
       }
       else {
-        //const threeAnswer = document.createElement('li')
         threeAnswer.innerText = musicianObject.wrongAnswers[2]
         quiz.append(threeAnswer)
         threeAnswer.addEventListener("click", function () {
@@ -250,9 +239,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           divContainer.append(answerResponse)
-
-          scoreValue = scoreValue - 1;
-          scoreCounter.innerText = `score: ${scoreValue}/10`;
         })
       }
     }
