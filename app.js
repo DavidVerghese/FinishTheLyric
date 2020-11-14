@@ -81,7 +81,7 @@ function shuffle(list) {
 let scoreValue = 0;
 
 const scoreCounter = document.createElement('h2');
-scoreCounter.innerText = `Final score: ${scoreValue}/10`;
+scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;
 const finalScoreAttacher = document.querySelector('#finalScore')
 finalScoreAttacher.append(scoreCounter);
 
@@ -172,7 +172,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
     for (x = 0; x < numbers2.length; x++) {
       if (numbers2[x] == 0) {
-        
+
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
@@ -279,16 +279,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
   catch (error) {
     console.log("error!")
   }
-}
-
-function removeQuestion() {
-  const remove = document.querySelectorAll('.music')
-
-  for (p = 0; p < remove.length; p++) {
-
-    remove[p].innerHTML = ''
-  }
-  introScreen.innerHTML = ''
 }
 
 startScreen()
