@@ -16,6 +16,10 @@ header {
   height: 100px;
   margin: 0;
 }
+hr {
+  height: 10px;
+  background-color: black;
+}
 img {
   width: 500px;
 }
