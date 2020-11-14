@@ -99,16 +99,6 @@ function startScreen() {
   })
 }
 
-// document.querySelector('#attach').style.display = "none"
-// document.querySelector('#attach2').style.display = "none"
-// document.querySelector('#attach3').style.display = "none"
-// document.querySelector('#attach4').style.display = "none"
-// document.querySelector('#attach5').style.display = "none"
-// document.querySelector('#attach6').style.display = "none"
-// document.querySelector('#attach7').style.display = "none"
-// document.querySelector('#attach8').style.display = "none"
-// document.querySelector('#attach9').style.display = "none"
-// document.querySelector('#attach10').style.display = "none"
 
 
 // the function that creates the ten questions 
@@ -120,7 +110,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   try {
 
-
+    const answerResponse = document.createElement('p')
+    answerResponse.innerText = ''
 
     // selecting which parts of the lyrics we want to append to the DOM 
 
@@ -185,7 +176,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           document.querySelector(id1).style.display = "inline"
           document.querySelector(id2).style.display = "none"
-          console.log(zeroAnswer)
+
+          // const correctAnswerResponse = document.createElement('p')
+          answerResponse.innerText = 'Good job!'
+          divContainer.append(answerResponse)
         })
       }
       else if (numbers2[x] == 1) {
@@ -200,6 +194,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
+
+          answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          divContainer.append(answerResponse)
         })
       }
       else if (numbers2[x] == 2) {
@@ -214,6 +211,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
+
+          answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          divContainer.append(answerResponse)
         })
       }
       else {
@@ -228,6 +228,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
+
+          answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          divContainer.append(answerResponse)
         })
       }
     }
@@ -242,6 +245,21 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
     nextLink.appendChild(nextButton)
     divContainer.append(nextLink)
     nextButton.addEventListener("click", function () {
+
+
+
+      const allTheQuestions = document.querySelectorAll('div')
+
+
+      // console.log(document.querySelectorAll('div').length)
+      // for (t = 0; t < allTheQuestions.length; t++) {
+      //   if (allTheQuestions[t].getAttribute('id') === 'attach') {
+      //     console.log('attach!')
+      //   }
+      //   //console.log(document.querySelectorAll('div')[t].getAttribute('id'))
+      // }
+      // //console.log(document.querySelectorAll('div')[20].getAttribute('id'))
+
 
       divContainer.style.display = "none"
       document.querySelector(id1).style.display = "none"
@@ -309,3 +327,5 @@ for (c = 0; c < questionOrder.length; c++) {
     finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
 }
+
+
