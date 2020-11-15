@@ -32,8 +32,8 @@ li {
   list-style-position: inside;
   display: inline;
   height: 60px;
-  /* display: flex-end;
-  justify-content: space-around; */
+  /* display: flex-end; */
+  justify-content: space-around;
   background-color: #8860D0;
 }
 
@@ -120,6 +120,7 @@ li:hover {
   color: green;
   float: left;
   display: none;
+  margin: 0px;
   background-color: black;
   width: 50px;
 }
@@ -129,6 +130,7 @@ li:hover {
   font-size: 30px;
   float: right;
   display: none;
+  margin: 0px;
   background-color: black;
   width: 50px;
 }

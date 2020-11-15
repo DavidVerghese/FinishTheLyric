@@ -114,6 +114,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   try {
 
+    const brSpacing = document.createElement('br')
+    divContainer.append(brSpacing)
     const hrLine = document.createElement('hr')
     divContainer.append(hrLine)
     const answerResponse = document.createElement('p')
@@ -157,6 +159,9 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
 
     //divContainer.style.display = 'none'
 
+
+
+
     const quiz = document.createElement('ul')
 
     const numbers = [0, 1, 2, 3]
@@ -181,7 +186,7 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           twoAnswer.style.border = "0px solid green"
           threeAnswer.style.border = "0px solid green"
 
-          document.querySelector(id1).style.display = "inline"
+          document.querySelector(id1).style.display = "flex"
           document.querySelector(id2).style.display = "none"
 
           //answerResponse.innerText = 'Good job!'
