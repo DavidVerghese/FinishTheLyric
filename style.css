@@ -24,15 +24,22 @@ img {
   width: 500px;
 }
 
+ul {
+  display: flex;
+  justify-content: space-around; 
+}
 li {
   list-style-position: inside;
   display: inline;
+  height: 60px;
+  /* display: flex-end;
+  justify-content: space-around; */
   background-color: #8860D0;
 }
 
 li:hover {
   list-style-position: inside;
-   display: inline;
+   /* display: inline; */
   background-color: #C2B9B0;
 }
 #attach li {
@@ -125,4 +132,5 @@ li:hover {
   background-color: black;
   width: 50px;
 }
+
 
