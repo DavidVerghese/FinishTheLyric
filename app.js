@@ -184,11 +184,13 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id1).style.display = "inline"
           document.querySelector(id2).style.display = "none"
 
-          answerResponse.innerText = 'Good job!'
-          divContainer.append(answerResponse)
+          //answerResponse.innerText = 'Good job!'
+          //divContainer.append(answerResponse)
+          instruction.innerText = 'Good job!'
+          displayMusic.innerText = ''
 
           scoreValue = scoreValue + 1;
-          scoreCounter.innerText = `score: ${scoreValue}/10`;
+          scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;
         })
       }
       else if (numbers2[x] == 1) {
@@ -203,8 +205,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
 
-          answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          divContainer.append(answerResponse)
+          //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          //divContainer.append(answerResponse)
+          instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          displayMusic.innerText = ''
 
         })
       }
@@ -220,8 +224,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
 
-          answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          divContainer.append(answerResponse)
+          //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          //divContainer.append(answerResponse)
+          instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          displayMusic.innerText = ''
 
         })
       }
@@ -237,8 +243,10 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
 
-          answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          divContainer.append(answerResponse)
+          //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          //divContainer.append(answerResponse)
+          instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          displayMusic.innerText = ''
         })
       }
     }
