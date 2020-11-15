@@ -187,6 +187,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           //answerResponse.innerText = 'Good job!'
           //divContainer.append(answerResponse)
           instruction.innerText = 'Good job!'
+          instruction.style.color = 'green'
+          instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
 
           scoreValue = scoreValue + 1;
@@ -208,6 +210,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           //divContainer.append(answerResponse)
           instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          instruction.style.color = 'red'
+          instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
 
         })
@@ -227,6 +231,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           //divContainer.append(answerResponse)
           instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          instruction.style.color = 'red'
+          instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
 
         })
@@ -246,6 +252,8 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           //divContainer.append(answerResponse)
           instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          instruction.style.color = 'red'
+          instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
         })
       }
