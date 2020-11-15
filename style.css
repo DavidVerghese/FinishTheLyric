@@ -32,14 +32,12 @@ li {
   list-style-position: inside;
   display: inline;
   height: 60px;
-  /* display: flex-end; */
   justify-content: space-around;
   background-color: #8860D0;
 }
 
 li:hover {
   list-style-position: inside;
-   /* display: inline; */
   background-color: #C2B9B0;
 }
 #attach li {

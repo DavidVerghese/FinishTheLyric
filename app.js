@@ -94,13 +94,6 @@ function startScreen() {
   const introText = document.createElement('p')
   introText.innerText = `Are you ready to test your music trivia knowledge?`
   introScreen.append(introText)
-  // const startButton = document.createElement('button')
-  // startButton.innerText = 'Start the quiz!'
-  // startButton.setAttribute('class', 'next')
-  // introScreen.append(startButton)
-  // startButton.addEventListener("click", function () {
-  //   introScreen.style.display = 'none'
-  // })
 }
 
 
@@ -189,8 +182,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id1).style.display = "flex"
           document.querySelector(id2).style.display = "none"
 
-          //answerResponse.innerText = 'Good job!'
-          //divContainer.append(answerResponse)
           instruction.innerText = 'Good job!'
           instruction.style.color = 'green'
           instruction.style.fontSize = '30px';
@@ -212,8 +203,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
 
-          //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          //divContainer.append(answerResponse)
           instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           instruction.style.color = 'red'
           instruction.style.fontSize = '30px';
@@ -233,8 +222,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
 
-          //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          //divContainer.append(answerResponse)
           instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           instruction.style.color = 'red'
           instruction.style.fontSize = '30px';
@@ -254,8 +241,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
 
-          //answerResponse.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          //divContainer.append(answerResponse)
           instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           instruction.style.color = 'red'
           instruction.style.fontSize = '30px';
@@ -264,37 +249,6 @@ async function finishTheLyric(artist, song, a, b, c, d, wrongAnswersArray, divCo
       }
     }
 
-
-    // const nextLink = document.createElement('a')
-    // nextLink.setAttribute('href', buttonDestination)
-    // //nextLink.appendChild(nextButton)
-    // const nextButton = document.createElement('button')
-    // nextButton.innerText = buttonText
-    // nextButton.setAttribute('class', 'next')
-    // nextLink.appendChild(nextButton)
-    // divContainer.append(nextLink)
-    // nextButton.addEventListener("click", function () {
-
-
-
-    //   const allTheQuestions = document.querySelectorAll('div')
-
-
-    //   // console.log(document.querySelectorAll('div').length)
-    //   // for (t = 0; t < allTheQuestions.length; t++) {
-    //   //   if (allTheQuestions[t].getAttribute('id') === 'attach') {
-    //   //     console.log('attach!')
-    //   //   }
-    //   //   //console.log(document.querySelectorAll('div')[t].getAttribute('id'))
-    //   // }
-    //   // //console.log(document.querySelectorAll('div')[20].getAttribute('id'))
-
-
-    //   divContainer.style.display = "none"
-    //   document.querySelector(id1).style.display = "none"
-    //   document.querySelector(id2).style.display = "none"
-    //   //finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, ['outrageous', `sagacious`, `cretaceous`], musicDiv2, "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif", '#q2Right', '#q2Wrong', 'Next')
-    // })
 
   }
   catch (error) {
