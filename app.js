@@ -55,6 +55,8 @@ attach10.append(musicDiv10)
 // Creating the algorithim that creates a random array of numbers. 
 // this controls the order of the multiple choice choices, and the order in which 
 // questions appear on the page
+// It goes through each number one at a time, and switches it out with a random 
+// number
 // This is based on the "shuffle card" function from 'high_low game' homework
 
 function shuffle(list) {
@@ -78,8 +80,8 @@ function shuffle(list) {
   return (newList)
 }
 
+// creating the HTML elements for the scoreCounter section  
 let scoreValue = 0;
-
 const scoreCounterBr = document.createElement('br');
 const scoreCounterHr = document.createElement('hr');
 const scoreCounter = document.createElement('h2');
@@ -175,6 +177,9 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     const oneAnswer = document.createElement('li')
     const twoAnswer = document.createElement('li')
     const threeAnswer = document.createElement('li')
+
+    // giving the answers created above a correct or incorrect answer 
+    // choice and appending them in a random order onto the DOM
     for (x = 0; x < numbers2.length; x++) {
       if (numbers2[x] == 0) {
         zeroAnswer.innerText = musicianObject.correctAnswer
@@ -283,6 +288,10 @@ const rightAnswer = ['#q1Right', '#q2Right', '#q3Right', '#q4Right', '#q5Right',
 const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong', '#q6Wrong', '#q7Wrong', '#q8Wrong', '#q9Wrong', '#q10Wrong']
 const linksForNextButton = ['#second', '#third', '#fourth', '#fifth', '#sixth', '#seventh', '#eighth', '#ninth', '#tenth', '#intro']
 const idsOfDivContainers = ['#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach']
+
+// running each of the 10 functions, and assigning them to a random 
+// div (The div controls the position on the webpage. Eg musicDiv2 means it
+// will the be the second question, musicDiv3 means it will be the third, etc)
 
 for (c = 0; c < questionOrder.length; c++) {
 
