@@ -306,8 +306,8 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
 startScreen()
 
-const questionOrder = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-//const questionOrder = shuffle(questionOrderSorted)
+const questionOrderSorted = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+const questionOrder = shuffle(questionOrderSorted)
 const divOrder = [musicDiv, musicDiv2, musicDiv3, musicDiv4, musicDiv5, musicDiv6, musicDiv7, musicDiv8, musicDiv9, musicDiv10, musicDiv11, musicDiv12, musicDiv13, musicDiv14, musicDiv15]
 const rightAnswer = ['#q1Right', '#q2Right', '#q3Right', '#q4Right', '#q5Right', '#q6Right', '#q7Right', '#q8Right', '#q9Right', '#q10Right', '#q11Right', '#q12Right', '#q13Right', '#q14Right', '#q15Right']
 const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong', '#q6Wrong', '#q7Wrong', '#q8Wrong', '#q9Wrong', '#q10Wrong', '#q11Wrong', '#q12Wrong', '#q13Wrong', '#q14Wrong', '#q15Wrong']
