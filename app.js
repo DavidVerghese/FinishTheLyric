@@ -302,13 +302,13 @@ for (c = 0; c < questionOrder.length; c++) {
     finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, '500px', ['fast Tango', 'waltz', 'flamenco'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
   else if (c === 7) {
-    finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, '550px', ['Yanni', 'TV', 'the Simpsons'], divOrder[questionOrder[c]], "https://i.gifer.com/MnQZ.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, '500px', ['Yanni', 'TV', 'the Simpsons'], divOrder[questionOrder[c]], "https://i.gifer.com/MnQZ.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
   else if (c === 8) {
     finishTheLyric('The White Stripes', `Seven Nation Army`, 208, 247, 248, 258, '450px', ['paywall', 'brain fog', 'riddle'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
   else {
-    finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, '600px', ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, '500px', ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
 }
 

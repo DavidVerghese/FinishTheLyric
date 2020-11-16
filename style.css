@@ -147,8 +147,11 @@ li:hover {
   }
   li {
     font-size: 18px;
-    padding: 20px;
+    padding: 16px;
   }
+  /* img {
+    width: 100px;
+  } */
 }
 
  @media only screen and (max-width: 1000px){
