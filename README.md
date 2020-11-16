@@ -83,7 +83,7 @@ The result:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Working With the API | H | 3hrs|3hrs |  |
-| Research | Moderate | 2hrs| 5hr |  |
+| Research | Moderate | 2hrs| 5hrs |  |
 | Game Design | H | 3hrs| 2hrs |  |
 | Dom Manipulation | Moderate | 3hrs|3hrs |  |
 | Flexbox/CSS Review | High | 2hrs| 1hr | |
@@ -95,7 +95,7 @@ The result:
 | Debugging the code | H | 3hrs| 4hrs |  |
 | Testing | H | 3hrs|3hrs  |  |
 | Cleaning up the code | Moderate | 2hrs|1hr  |  |
-| Total | H | 36hrs|  |  |
+| Total | H | 36hrs|31hrs  |  |
 
 ## Code Snippet
 
