@@ -116,7 +116,8 @@ li:hover {
 }
 
 #q1Right, #q2Right, #q3Right, #q4Right, #q5Right,
-#q6Right, #q7Right, #q8Right, #q9Right, #q10Right, #q11Right, #q12Right {
+#q6Right, #q7Right, #q8Right, #q9Right, #q10Right, #q11Right, #q12Right,
+#q13Right, #q14Right, #q15Right  {
   font-size: 30px;
   color: green;
   float: left;
@@ -128,7 +129,8 @@ li:hover {
 }
 
 #q1Wrong, #q2Wrong, #q3Wrong, #q4Wrong, #q5Wrong,
-#q6Wrong, #q7Wrong, #q8Wrong, #q9Wrong, #q10Wrong, #q11Wrong, #q12Wrong {
+#q6Wrong, #q7Wrong, #q8Wrong, #q9Wrong, #q10Wrong, #q11Wrong, #q12Wrong, 
+#q13Wrong, #q14Wrong, #q15Wrong {
   font-size: 30px;
   float: right;
   display: none;
