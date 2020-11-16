@@ -116,7 +116,7 @@ li:hover {
 }
 
 #q1Right, #q2Right, #q3Right, #q4Right, #q5Right,
-#q6Right, #q7Right, #q8Right, #q9Right, #q10Right{
+#q6Right, #q7Right, #q8Right, #q9Right, #q10Right, #q11Right, #q12Right {
   font-size: 30px;
   color: green;
   float: left;
@@ -128,7 +128,7 @@ li:hover {
 }
 
 #q1Wrong, #q2Wrong, #q3Wrong, #q4Wrong, #q5Wrong,
-#q6Wrong, #q7Wrong, #q8Wrong, #q9Wrong, #q10Wrong {
+#q6Wrong, #q7Wrong, #q8Wrong, #q9Wrong, #q10Wrong, #q11Wrong, #q12Wrong {
   font-size: 30px;
   float: right;
   display: none;
@@ -149,9 +149,6 @@ li:hover {
     font-size: 18px;
     padding: 16px;
   }
-  /* img {
-    width: 100px;
-  } */
 }
 
  @media only screen and (max-width: 1000px){

@@ -52,6 +52,16 @@ const musicDiv10 = document.createElement('div')
 musicDiv10.setAttribute('class', 'music')
 attach10.append(musicDiv10)
 
+const attach11 = document.querySelector('#attach11')
+const musicDiv11 = document.createElement('div')
+musicDiv11.setAttribute('class', 'music')
+attach11.append(musicDiv11)
+
+const attach12 = document.querySelector('#attach12')
+const musicDiv12 = document.createElement('div')
+musicDiv12.setAttribute('class', 'music')
+attach12.append(musicDiv12)
+
 // Creating the algorithim that creates a random array of numbers. 
 // this controls the order of the multiple choice choices, and the order in which 
 // questions appear on the page
@@ -85,7 +95,7 @@ let scoreValue = 0;
 const scoreCounterBr = document.createElement('br');
 const scoreCounterHr = document.createElement('hr');
 const scoreCounter = document.createElement('h2');
-scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;
+scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/12`;
 const finalScoreAttacher = document.querySelector('#finalScore')
 finalScoreAttacher.append(scoreCounterBr);
 finalScoreAttacher.append(scoreCounterHr);
@@ -200,7 +210,7 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
           if (clickValue === 0) {
             scoreValue = scoreValue + 1;
-            scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;
+            scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/12`;
 
             clickValue += 1
             console.log(clickValue)
@@ -281,13 +291,13 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
 startScreen()
 
-const questionOrderSorted = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+const questionOrderSorted = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 const questionOrder = shuffle(questionOrderSorted)
-const divOrder = [musicDiv, musicDiv2, musicDiv3, musicDiv4, musicDiv5, musicDiv6, musicDiv7, musicDiv8, musicDiv9, musicDiv10]
-const rightAnswer = ['#q1Right', '#q2Right', '#q3Right', '#q4Right', '#q5Right', '#q6Right', '#q7Right', '#q8Right', '#q9Right', '#q10Right']
-const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong', '#q6Wrong', '#q7Wrong', '#q8Wrong', '#q9Wrong', '#q10Wrong']
-const linksForNextButton = ['#second', '#third', '#fourth', '#fifth', '#sixth', '#seventh', '#eighth', '#ninth', '#tenth', '#intro']
-const idsOfDivContainers = ['#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach']
+const divOrder = [musicDiv, musicDiv2, musicDiv3, musicDiv4, musicDiv5, musicDiv6, musicDiv7, musicDiv8, musicDiv9, musicDiv10, musicDiv11, musicDiv12]
+const rightAnswer = ['#q1Right', '#q2Right', '#q3Right', '#q4Right', '#q5Right', '#q6Right', '#q7Right', '#q8Right', '#q9Right', '#q10Right', '#q11Right', '#q12Right']
+const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong', '#q6Wrong', '#q7Wrong', '#q8Wrong', '#q9Wrong', '#q10Wrong', '#q11Wrong', '#q12Wrong']
+const linksForNextButton = ['#second', '#third', '#fourth', '#fifth', '#sixth', '#seventh', '#eighth', '#ninth', '#tenth', '#eleventh', '#twelfth', '#intro']
+// const idsOfDivContainers = ['#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach']
 
 // running each of the 10 functions, and assigning them to a random 
 // div (The div controls the position on the webpage. Eg musicDiv2 means it
@@ -323,8 +333,13 @@ for (c = 0; c < questionOrder.length; c++) {
   else if (c === 8) {
     finishTheLyric('The White Stripes', `Seven Nation Army`, 208, 247, 248, 258, '450px', ['paywall', 'brain fog', 'riddle'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
-  else {
+  else if (c === 9) {
     finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, '500px', ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+  }
+  else if (c === 10) {
+    finishTheLyric('Bob Dylan', `Blowin' in the Wind`, 67, 130, 130, 135, '350px', ['blue whale', 'soft bed', 'nest'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/kpgzE7I82DNfO/giphy.gif?cid=ecf05e475h9l3cjbmyx4jfuto5pfhjh77hmjyp9whtkc3iuu&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+  } else {
+    finishTheLyric('Ed Sheeran', `Thinking Out Loud`, 833, 870, 870, 880, '500px', ['immortal', 'nonexistant', 'gold'], divOrder[questionOrder[c]], "https://media2.giphy.com/media/35yNLTW7Eba9ZuVtbh/giphy.gif?cid=ecf05e4756eff247fe03f8aa0d9d7065fc4a2aec39214b00&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
   }
 }
 
