@@ -144,7 +144,6 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
     const displayGif = document.createElement('img')
     displayGif.style.width = imageWidth;
-    console.log(displayGif.style.width)
     displayGif.setAttribute('src', gif)
     divContainer.append(displayGif)
 
@@ -158,9 +157,6 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
 
     //divContainer.style.display = 'none'
-
-
-
 
     const quiz = document.createElement('ul')
 
@@ -186,13 +182,14 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           twoAnswer.style.border = "0px solid green"
           threeAnswer.style.border = "0px solid green"
 
-          document.querySelector(id1).style.display = "flex"
+          document.querySelector(id1).style.display = "inline"
           document.querySelector(id2).style.display = "none"
 
           instruction.innerText = 'Good job!'
           instruction.style.color = 'green'
           instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
+
 
           scoreValue = scoreValue + 1;
           scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;

@@ -6,6 +6,15 @@ body {
   font-family: 'Oswald', sans-serif;
 }
 
+@media only screen and (max-width: 550px){
+  body {
+    font-size: 20px;
+  }
+  hr {
+    margin-top: 20px;
+  }
+}
+
 footer {
   background-color: #41B3A3;
   height: 100px;
@@ -13,12 +22,16 @@ footer {
 }
 header {
   background-color: #E8A87C;
-  height: 100px;
+  /* height: 100px; */
   margin: 0;
 }
 hr {
   height: 10px;
   background-color: black;
+  display: block;
+}
+h2 {
+  margin: 0px;
 }
 
 ul {
@@ -131,5 +144,3 @@ li:hover {
   background-color: black;
   width: 50px;
 }
-
-
