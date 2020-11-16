@@ -220,6 +220,8 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
 
+          clickValue += 1
+
         })
       }
       else if (numbers2[x] == 2) {
@@ -239,6 +241,8 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
 
+          clickValue += 1
+
         })
       }
       else {
@@ -257,6 +261,8 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           instruction.style.color = 'red'
           instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
+
+          clickValue += 1
         })
       }
     }
