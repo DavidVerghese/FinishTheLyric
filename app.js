@@ -136,7 +136,7 @@ function startScreen() {
 
 // the function that creates the ten questions 
 
-async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2, buttonText, buttonDestination) {
+async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2) {
 
   //getting the data from the API
   let clickValue = 0;
@@ -306,13 +306,12 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
 startScreen()
 
-const questionOrder = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
-//const questionOrder = shuffle(questionOrderSorted)
+const questionOrderSorted = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+const questionOrder = shuffle(questionOrderSorted)
 const divOrder = [musicDiv, musicDiv2, musicDiv3, musicDiv4, musicDiv5, musicDiv6, musicDiv7, musicDiv8, musicDiv9, musicDiv10, musicDiv11, musicDiv12, musicDiv13, musicDiv14, musicDiv15]
 const rightAnswer = ['#q1Right', '#q2Right', '#q3Right', '#q4Right', '#q5Right', '#q6Right', '#q7Right', '#q8Right', '#q9Right', '#q10Right', '#q11Right', '#q12Right', '#q13Right', '#q14Right', '#q15Right']
 const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong', '#q6Wrong', '#q7Wrong', '#q8Wrong', '#q9Wrong', '#q10Wrong', '#q11Wrong', '#q12Wrong', '#q13Wrong', '#q14Wrong', '#q15Wrong']
-const linksForNextButton = ['#second', '#third', '#fourth', '#fifth', '#sixth', '#seventh', '#eighth', '#ninth', '#tenth', '#eleventh', '#twelfth', '#thirteenth', '#fourteenth', '#fifteenth', '#intro']
-// const idsOfDivContainers = ['#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach', '#attach']
+
 
 // running each of the 10 functions, and assigning them to a random 
 // div (The div controls the position on the webpage. Eg musicDiv2 means it
@@ -322,49 +321,49 @@ for (c = 0; c < questionOrder.length; c++) {
 
   if (c === 0) {
 
-    finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, '500px', ['his photo collection', 'haircuts', 'paintings'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, '500px', ['his photo collection', 'haircuts', 'paintings'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 1) {
-    finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, '400px', ['outrageous', `sagacious`, `cretaceous`], divOrder[questionOrder[c]], "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, '400px', ['outrageous', `sagacious`, `cretaceous`], divOrder[questionOrder[c]], "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 2) {
-    finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, '500px', ['Westeros', 'Old Town Road', 'Westville Road'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif?cid=ecf05e4793d86e0ac4d7c3776f31f3445a8a54085c6ec850&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, '500px', ['Westeros', 'Old Town Road', 'Westville Road'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif?cid=ecf05e4793d86e0ac4d7c3776f31f3445a8a54085c6ec850&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 3) {
-    finishTheLyric('Bill Withers', `Lean On Me`, 259, 314, 314, 320, '350px', ['know', 'hide', 'steal'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Bill Withers', `Lean On Me`, 259, 314, 314, 320, '350px', ['know', 'hide', 'steal'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 4) {
-    finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, '500px', ['afford this', 'configure this', 'repair this'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, '500px', ['afford this', 'configure this', 'repair this'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 5) {
-    finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, '450px', ['riddles', 'French', 'stats'], divOrder[questionOrder[c]], "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, '450px', ['riddles', 'French', 'stats'], divOrder[questionOrder[c]], "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 6) {
-    finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, '500px', ['fast Tango', 'waltz', 'flamenco'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, '500px', ['fast Tango', 'waltz', 'flamenco'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 7) {
-    finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, '500px', ['Yanni', 'TV', 'the Simpsons'], divOrder[questionOrder[c]], "https://i.gifer.com/MnQZ.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, '500px', ['Yanni', 'TV', 'the Simpsons'], divOrder[questionOrder[c]], "https://i.gifer.com/MnQZ.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 8) {
-    finishTheLyric('The White Stripes', `Seven Nation Army`, 208, 247, 248, 258, '450px', ['paywall', 'brain fog', 'riddle'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('The White Stripes', `Seven Nation Army`, 208, 247, 248, 258, '450px', ['paywall', 'brain fog', 'riddle'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 9) {
-    finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, '500px', ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, '500px', ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 10) {
-    finishTheLyric('Bob Dylan', `Blowin' in the Wind`, 67, 130, 130, 135, '350px', ['blue whale', 'soft bed', 'nest'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/kpgzE7I82DNfO/giphy.gif?cid=ecf05e475h9l3cjbmyx4jfuto5pfhjh77hmjyp9whtkc3iuu&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Bob Dylan', `Blowin' in the Wind`, 67, 130, 130, 135, '300px', ['blue whale', 'soft bed', 'nest'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/kpgzE7I82DNfO/giphy.gif?cid=ecf05e475h9l3cjbmyx4jfuto5pfhjh77hmjyp9whtkc3iuu&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 11) {
-    finishTheLyric('Ed Sheeran', `Thinking Out Loud`, 833, 870, 870, 880, '500px', ['immortal', 'nonexistant', 'gold'], divOrder[questionOrder[c]], "https://media2.giphy.com/media/35yNLTW7Eba9ZuVtbh/giphy.gif?cid=ecf05e4756eff247fe03f8aa0d9d7065fc4a2aec39214b00&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Ed Sheeran', `Thinking Out Loud`, 833, 870, 870, 880, '500px', ['immortal', 'nonexistant', 'gold'], divOrder[questionOrder[c]], "https://media2.giphy.com/media/35yNLTW7Eba9ZuVtbh/giphy.gif?cid=ecf05e4756eff247fe03f8aa0d9d7065fc4a2aec39214b00&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 12) {
-    finishTheLyric('Adele', `Rolling in the Deep`, 447, 484, 484, 495, '450px', ['bleeding', 'pained', 'drained'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/13vJHSyname1Hy/giphy.gif?cid=ecf05e475i7tkh57yz14gzd1fwmz4zabtoi8o85sweoe5l3p&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Adele', `Rolling in the Deep`, 447, 484, 484, 495, '450px', ['bleeding', 'pained', 'drained'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/13vJHSyname1Hy/giphy.gif?cid=ecf05e475i7tkh57yz14gzd1fwmz4zabtoi8o85sweoe5l3p&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else if (c === 13) {
-    finishTheLyric('Elvis Pressley', `Jailhouse Rock`, 45, 88, 88, 93, '500px', ['rock', 'fight', 'dance'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/2in9K8r6lnAPjPJNZt/giphy.gif?cid=ecf05e47zahlbq0nwwsrqe470oc2ltjs86eiswqxsedf7xn2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Elvis Pressley', `Jailhouse Rock`, 45, 88, 88, 93, '500px', ['rock', 'fight', 'dance'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/2in9K8r6lnAPjPJNZt/giphy.gif?cid=ecf05e47zahlbq0nwwsrqe470oc2ltjs86eiswqxsedf7xn2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
   else {
-    finishTheLyric('Aretha Franklin', `Respect`, 92, 140, 140, 149, '500px', ['see me', 'hear me', 'get here'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/OjIM4Rgkv8gKj4KWku/giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], 'Next', linksForNextButton[questionOrder[c]])
+    finishTheLyric('Aretha Franklin', `Respect`, 92, 140, 140, 149, '500px', ['see me', 'hear me', 'get here'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/OjIM4Rgkv8gKj4KWku/giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]])
   }
 }
 
