@@ -83,10 +83,10 @@ The result:
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | Working With the API | H | 3hrs|3hrs |  |
-| Research | Moderate | 2hrs| 1hr |  |
+| Research | Moderate | 2hrs| 5hr |  |
 | Game Design | H | 3hrs| 2hrs |  |
 | Dom Manipulation | Moderate | 3hrs|3hrs |  |
-| Flexbox/CSS Review | High | 2hrs| 1hrs | |
+| Flexbox/CSS Review | High | 2hrs| 1hr | |
 | Graphic Design | Moderate | 3hrs| 4hrs |  |
 | Flexbox | Moderate | 3hrs| 3hrs | |
 | Writing Text | Moderate | 3hrs| 2hrs|  |
