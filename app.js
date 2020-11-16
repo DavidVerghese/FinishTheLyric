@@ -112,6 +112,7 @@ function startScreen() {
 async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2, buttonText, buttonDestination) {
 
   //getting the data from the API
+  let clickValue = 0;
 
   const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
   try {
@@ -174,7 +175,6 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     const oneAnswer = document.createElement('li')
     const twoAnswer = document.createElement('li')
     const threeAnswer = document.createElement('li')
-    let clickValue = 0;
     for (x = 0; x < numbers2.length; x++) {
       if (numbers2[x] == 0) {
         zeroAnswer.innerText = musicianObject.correctAnswer
@@ -193,12 +193,13 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
 
+          if (clickValue === 0) {
+            scoreValue = scoreValue + 1;
+            scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;
 
-          scoreValue = scoreValue + 1;
-          scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;
-
-          clickValue++
-          console.log(clickValue)
+            clickValue += 1
+            console.log(clickValue)
+          }
 
         })
       }
