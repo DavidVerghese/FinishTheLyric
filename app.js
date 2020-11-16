@@ -107,14 +107,20 @@ function shuffle(list) {
 
 // creating the HTML elements for the scoreCounter section  
 let scoreValue = 0;
+let rankValue = 'music ignoramus'
 const scoreCounterBr = document.createElement('br');
 const scoreCounterHr = document.createElement('hr');
 const scoreCounter = document.createElement('h2');
 scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/15`;
 const finalScoreAttacher = document.querySelector('#finalScore')
+
+const finalRank = document.createElement('h2');
+finalRank.innerText = `Rank: ${rankValue}`;
+
 finalScoreAttacher.append(scoreCounterBr);
 finalScoreAttacher.append(scoreCounterHr);
 finalScoreAttacher.append(scoreCounter);
+finalScoreAttacher.append(finalRank);
 
 // the function that creates the start screen 
 
@@ -150,6 +156,8 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     divContainer.append(hrLine)
     const answerResponse = document.createElement('p')
     answerResponse.innerText = ''
+
+
 
     // selecting which parts of the lyrics we want to append to the DOM 
 
@@ -187,9 +195,6 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     displayMusic.innerText = musicianObject.prompt
     divContainer.append(displayMusic)
 
-
-    //divContainer.style.display = 'none'
-
     const quiz = document.createElement('ul')
 
     const numbers = [0, 1, 2, 3]
@@ -223,16 +228,30 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
 
+
           if (clickValue === 0) {
             scoreValue = scoreValue + 1;
             scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/15`;
 
             clickValue += 1
-            console.log(clickValue)
 
             var correctAnswerSound = document.getElementById(correctSoundId);
             correctAnswerSound.volume = 0.6;
             correctAnswerSound.play();
+
+            if (scoreValue > 5 & scoreValue < 10) {
+              let rankValue = 'Music plebian'
+              finalRank.innerText = `Rank: ${rankValue}`;
+            }
+            else if (scoreValue > 10 & scoreValue < 13) {
+              let rankValue = 'Music lover'
+              finalRank.innerText = `Rank: ${rankValue}`;
+            }
+            else if (scoreValue > 13) {
+              let rankValue = 'Music god'
+              finalRank.innerText = `Rank: ${rankValue}`;
+            }
+
           }
 
         })
@@ -382,5 +401,4 @@ for (c = 0; c < questionOrder.length; c++) {
     finishTheLyric('Aretha Franklin', `Respect`, 92, 140, 140, 149, '450px', ['see me', 'hear me', 'get here'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/OjIM4Rgkv8gKj4KWku/giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound14", "wrongSound14")
   }
 }
-
 
