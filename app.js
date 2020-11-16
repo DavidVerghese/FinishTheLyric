@@ -80,9 +80,13 @@ function shuffle(list) {
 
 let scoreValue = 0;
 
+const scoreCounterBr = document.createElement('br');
+const scoreCounterHr = document.createElement('hr');
 const scoreCounter = document.createElement('h2');
 scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;
 const finalScoreAttacher = document.querySelector('#finalScore')
+finalScoreAttacher.append(scoreCounterBr);
+finalScoreAttacher.append(scoreCounterHr);
 finalScoreAttacher.append(scoreCounter);
 
 // the function that creates the start screen 
@@ -170,10 +174,9 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     const oneAnswer = document.createElement('li')
     const twoAnswer = document.createElement('li')
     const threeAnswer = document.createElement('li')
-
+    let clickValue = 0;
     for (x = 0; x < numbers2.length; x++) {
       if (numbers2[x] == 0) {
-
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
@@ -193,6 +196,10 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
           scoreValue = scoreValue + 1;
           scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/10`;
+
+          clickValue++
+          console.log(clickValue)
+
         })
       }
       else if (numbers2[x] == 1) {
