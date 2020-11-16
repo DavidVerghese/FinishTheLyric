@@ -37,6 +37,7 @@ li {
   height: 60px;
   justify-content: space-around;
   background-color: #8860D0;
+  padding: 0px;
 }
 
 li:hover {
@@ -130,6 +131,10 @@ li:hover {
   background-color:#9932cc;
 }
 
+img {
+  padding: 0px;
+}
+
 .next {
   background-color: #659DBD;
   font-size: 20px;
@@ -146,6 +151,7 @@ li:hover {
   margin-left: 10px;
   background-color: black;
   width: 50px;
+  padding: 0px;
 }
 
 #q1Wrong, #q2Wrong, #q3Wrong, #q4Wrong, #q5Wrong,
@@ -158,6 +164,7 @@ li:hover {
   margin-right: 10px;
   background-color: black;
   width: 50px;
+  padding: 0px;
 }
 
 @media only screen and (max-width: 550px){
