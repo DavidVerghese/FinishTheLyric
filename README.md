@@ -99,12 +99,13 @@ The result:
 
 ## Code Snippet
 
-let clickValue = 0;
+```let clickValue = 0;
 if (clickValue === 0) {
     scoreValue = scoreValue + 1;
     scoreCounter.innerText = "FINAL SCORE: ${scoreValue}/15";
     clickValue += 1;
 }
+```
 
 The code above goes inside an event listener that reacts if the user clicks the right choice. I wanted to update the score once the user clicks the right answer. However, I needed to make sure this only occurred only once. I initially had a problem where the score would be updated multiple times if the user clicked the correct choice more than once. I used the if statement and the variable clickValue to make sure it only runs once. 
 
