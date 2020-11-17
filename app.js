@@ -133,7 +133,7 @@ function startScreen() {
   introText.innerText = `Are you ready to test your music trivia knowledge?`
   const introSecondLine = document.createElement('p')
   introSecondLine.innerText = `Scroll down to start`
-  introSecondLine.style.fontSize = '23px';
+  introSecondLine.style.fontSize = '30px';
   introSecondLine.style.fontStyle = 'italic';
   introScreen.append(introText)
   introScreen.append(introSecondLine)
