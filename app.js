@@ -242,6 +242,8 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
             clickValue += 1
 
             // playing a sound if the user picks the right answer
+            // based on a code from this Stack Overflow question 
+            // https://stackoverflow.com/questions/29567580/play-a-beep-sound-on-button-click
             var correctAnswerSound = document.getElementById(correctSoundId);
             correctAnswerSound.volume = 0.6;
             correctAnswerSound.play();
