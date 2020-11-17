@@ -82,20 +82,20 @@ The result:
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working With the API | H | 3hrs|3hrs |  |
-| Research | Moderate | 2hrs| 5hrs |  |
-| Game Design | H | 3hrs| 2hrs |  |
+| Working With the API | H | 3hrs|3hrs |3hrs  |
+| Research | Moderate | 2hrs| 5hrs | 5hrs |
+| Game Design | H | 3hrs| 2hrs |2hrs  |
 | Dom Manipulation | Moderate | 3hrs|3hrs |  |
-| Flexbox/CSS Review | High | 2hrs| 1hr | |
-| Graphic Design | Moderate | 3hrs| 4hrs |  |
-| Flexbox | Moderate | 3hrs| 3hrs | |
-| Writing Text | Moderate | 3hrs| 2hrs|  |
-| Feedback | H | 3hrs|  0hrs |  |
-| Incorporating Suggestions | H | 3hrs| 0hrs |  |
-| Debugging the code | H | 3hrs| 4hrs |  |
-| Testing | H | 3hrs|3hrs  |  |
-| Cleaning up the code | Moderate | 2hrs|1hr  |  |
-| Total | H | 36hrs|31hrs  |  |
+| Flexbox/CSS Review | High | 2hrs| 1hr | 1hr|
+| Graphic Design | Moderate | 3hrs| 4hrs |4hrs  |
+| Flexbox | Moderate | 3hrs| 3hrs | 3hrs|
+| Writing Text | Moderate | 3hrs| 2hrs| 2hrs |
+| Feedback | H | 3hrs|  0hrs | 0hrs |
+| Incorporating Suggestions | H | 3hrs| 0hrs |0hrs  |
+| Debugging the code | H | 3hrs| 4hrs | 4hrs |
+| Testing | H | 3hrs|3hrs  | 3hrs |
+| Cleaning up the code | Moderate | 2hrs|1hr  |1hrs  |
+| Total | H | 36hrs|31hrs  |31hrs  |
 
 ## Code Snippet
 
