@@ -82,23 +82,36 @@ The result:
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Working With the API | H | 3hrs| |  |
-| Research | Moderate | 2hrs|  |  |
-| Game Design | H | 3hrs|  |  |
-| Dom Manipulation | Moderate | 3hrs| |  |
-| Flexbox/CSS Review | High | 2hrs|  | |
-| Graphic Design | Moderate | 3hrs|  |  |
-| Flexbox | Moderate | 3hrs|  | |
-| Writing Text | Moderate | 3hrs| |  |
-| Feedback | H | 3hrs|  |  |
-| Incorporating Suggestions | H | 3hrs|  |  |
-| Debugging the code | H | 3hrs|  |  |
-| Testing | H | 3hrs|  |  |
-| Cleaning up the code | Moderate | 2hrs|  |  |
-| Total | H | 36hrs|  |  |
+| Working With the API | H | 3hrs|3hrs |3hrs  |
+| Research | Moderate | 2hrs| 5hrs | 5hrs |
+| Game Design | H | 3hrs| 2hrs |2hrs  |
+| Dom Manipulation | Moderate | 3hrs|3hrs |  |
+| Flexbox/CSS Review | High | 2hrs| 1hr | 1hr|
+| Graphic Design | Moderate | 3hrs| 4hrs |4hrs  |
+| Flexbox | Moderate | 3hrs| 3hrs | 3hrs|
+| Writing Text | Moderate | 3hrs| 2hrs| 2hrs |
+| Feedback | H | 3hrs|  0hrs | 0hrs |
+| Incorporating Suggestions | H | 3hrs| 0hrs |0hrs  |
+| Debugging the code | H | 3hrs| 4hrs | 4hrs |
+| Testing | H | 3hrs|3hrs  | 3hrs |
+| Cleaning up the code | Moderate | 2hrs|1hr  |1hrs  |
+| Total | H | 36hrs|31hrs  |31hrs  |
 
 ## Code Snippet
 
+let clickValue = 0;
+if (clickValue === 0) {
+    scoreValue = scoreValue + 1;
+    scoreCounter.innerText = "FINAL SCORE: ${scoreValue}/15";
+    clickValue += 1;
+}
+
+The code above goes inside an event listener that reacts if the user clicks the right choice. I wanted to update the score once the user clicks the right answer. However, I needed to make sure this only occurred only once. I initially had a problem where the score would be updated multiple times if the user clicked the correct choice more than once. I used the if statement and the variable clickValue to make sure it only runs once. 
 
 ## Change Log
+
+I had to change the API I used. I initially used the 'lyrics.ovh' api (https://lyricsovh.docs.apiary.io/#). However, this API would only work the first time I called it. I initally thought I wasn't using the right protocol to access the API. However, I showed it to Stefon, who confirmed it was in fact a problem with the API. I switched to the 'Apiseeds' api (https://apiseeds.com/documentation/lyrics). This worked fine. 
+I initally had 'next' buttons. I wanted to make sure that only one question displayed at a time. The idea was that once the user clicked the 'next' button it would display a new question and remove the previous question. However, I realised that the game worked fine with all the questions on the same webpage.
+Another thing I had to modify was the function shuffle. I based this on the shuffle card function from the 'high_low game' homework. In my code, I used the shuffle to randomly place the multiple choice answers, so that the correct answer would be in a random position. However, I found that the correct anwser was usually in the third or fourth spot from the left, and never in the first spot from the left. I wasn't able to figure out why this was. However, I modified the function shuffle so that there is a 50% chance that the order of the questions will be reversed. This solved this problem.
+
 
