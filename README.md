@@ -99,7 +99,8 @@ The result:
 
 ## Code Snippet
 
-```let clickValue = 0;
+```
+let clickValue = 0;
 if (clickValue === 0) {
     scoreValue = scoreValue + 1;
     scoreCounter.innerText = "FINAL SCORE: ${scoreValue}/15";
