@@ -110,9 +110,11 @@ if (clickValue === 0) {
 The code above goes inside an event listener that reacts if the user clicks the right choice. I wanted to update the score once the user clicks the right answer. However, I needed to make sure this only occurred only once. I initially had a problem where the score would be updated multiple times if the user clicked the correct choice more than once. I used the if statement and the variable clickValue to make sure it only runs once. 
 
 ## Change Log
-
-I had to change the API I used. I initially used the 'lyrics.ovh' api [I'm an inline-style link](https://lyricsovh.docs.apiary.io/#). However, this API would only work the first time I called it. I initally thought I wasn't using the right protocol to access the API. However, I showed it to Stefon, who confirmed it was in fact a problem with the API. I switched to the 'Apiseeds' api [I'm an inline-style link](https://apiseeds.com/documentation/lyrics). This worked fine. 
+#### Changing the API
+I had to change the API I used. I initially used the 'lyrics.ovh' api [link](https://lyricsovh.docs.apiary.io/#). However, this API would only work the first time I called it. I initally thought I wasn't using the right protocol to access the API. However, I showed it to Stefon, who confirmed it was in fact a problem with the API. I switched to the 'Apiseeds' api [link](https://apiseeds.com/documentation/lyrics). This worked fine. 
+#### Taking out the next button
 I initally had 'next' buttons. I wanted to make sure that only one question displayed at a time. The idea was that once the user clicked the 'next' button it would display a new question and remove the previous question. However, I realised that the game worked fine with all the questions on the same webpage.
+#### Modifying the shuffle function
 Another thing I had to modify was the function shuffle. I based this on the shuffle card function from the 'high_low game' homework. In my code, I used the shuffle to randomly place the multiple choice answers, so that the correct answer would be in a random position. However, I found that the correct anwser was usually in the third or fourth spot from the left, and never in the first spot from the left. I wasn't able to figure out why this was. However, I modified the function shuffle so that there is a 50% chance that the order of the questions will be reversed. This solved this problem.
 
 
