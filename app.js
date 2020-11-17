@@ -114,6 +114,7 @@ const scoreCounter = document.createElement('h2');
 scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/15`;
 const finalScoreAttacher = document.querySelector('#finalScore')
 
+// creating the HTML elements for the rank 
 const finalRank = document.createElement('h2');
 finalRank.innerText = `Rank: ${rankValue}`;
 
@@ -208,13 +209,16 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     const twoAnswer = document.createElement('li')
     const threeAnswer = document.createElement('li')
 
-    // giving the answers created above a correct or incorrect answer 
+    // giving the list items created above a text with the 
+    // correct or incorrect answer 
     // choice and appending them in a random order onto the DOM
     for (x = 0; x < numbers2.length; x++) {
       if (numbers2[x] == 0) {
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
+          // adding in the green border and check mark 
+          // if the user picks the right answer
           zeroAnswer.style.border = "10px solid green"
           oneAnswer.style.border = "0px solid green"
           twoAnswer.style.border = "0px solid green"
@@ -223,21 +227,27 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           document.querySelector(id1).style.display = "inline"
           document.querySelector(id2).style.display = "none"
 
+          // displaying text congratulating the user
+          // on picking the right answer
           instruction.innerText = 'Good job!'
           instruction.style.color = 'green'
           instruction.style.fontSize = '30px';
           displayMusic.innerText = ''
 
-
+          // changing the score if the user picks the right answer
           if (clickValue === 0) {
             scoreValue = scoreValue + 1;
             scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/15`;
 
             clickValue += 1
 
+            // playing a sound if the user picks the right answer
             var correctAnswerSound = document.getElementById(correctSoundId);
             correctAnswerSound.volume = 0.6;
             correctAnswerSound.play();
+
+            // displaying the user's rank 
+            // based on my personal ranking system 
 
             if (scoreValue > 5 & scoreValue < 10) {
               let rankValue = 'Music plebian'
@@ -260,6 +270,10 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
         oneAnswer.innerText = musicianObject.wrongAnswers[0]
         quiz.append(oneAnswer)
         oneAnswer.addEventListener("click", function () {
+
+          // adding in the red border and x mark 
+          // if the user picks the wrong answer
+
           oneAnswer.style.border = "10px solid red"
           zeroAnswer.style.border = "0px solid green"
           twoAnswer.style.border = "0px solid green"
@@ -268,6 +282,8 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           document.querySelector(id2).style.display = "inline"
           document.querySelector(id1).style.display = "none"
 
+          // display text correcting the user
+
           instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
           instruction.style.color = 'red'
           instruction.style.fontSize = '30px';
@@ -275,6 +291,7 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
           clickValue += 1
 
+          // playing a buzzer sound if the user picks the wrong sound
           var wrongAnswerSound = document.getElementById(wrongSoundId);
           wrongAnswerSound.volume = 0.9;
           wrongAnswerSound.play();
@@ -285,6 +302,7 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
         twoAnswer.innerText = musicianObject.wrongAnswers[1]
         quiz.append(twoAnswer)
         twoAnswer.addEventListener("click", function () {
+
           twoAnswer.style.border = "10px solid red"
           zeroAnswer.style.border = "0px solid green"
           oneAnswer.style.border = "0px solid green"
@@ -310,6 +328,7 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
         threeAnswer.innerText = musicianObject.wrongAnswers[2]
         quiz.append(threeAnswer)
         threeAnswer.addEventListener("click", function () {
+
           threeAnswer.style.border = "10px solid red"
           zeroAnswer.style.border = "0px solid green"
           oneAnswer.style.border = "0px solid green"
