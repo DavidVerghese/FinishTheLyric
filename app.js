@@ -139,16 +139,19 @@ function startScreen() {
   introScreen.append(introSecondLine)
 }
 
-
+const lyricsFiller = `Something in the way she moves Attracts me like no other lover Something in the way she woos me I don't want to leave her now You know I believe her now Somewhere in her smile she knows That I don't need no other lover Something in her style that shows me Don't want to leave her now You know I believe her now You're asking me will my love grow I don't know, I don't know You stick around now it may show I don't know, I don't know Something in the way she knows And all I have to do is think of her Something in the things she shows me Don't want to leave her now You know I believe her now`;
 
 // the function that creates the ten questions 
 
-async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2, correctSoundId, wrongSoundId) {
+async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2, correctSoundId, wrongSoundId, e, f) {
 
   //getting the data from the API
   let clickValue = 0;
 
-  const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
+  // const response = await axios.get(`https://orion.apiseeds.com/api/music/lyric/${artist}/${song}?apikey=lR78ECWIWgsXd0MPYBopACxHpWL2Q6fOVET7KJtjI8vIHGnk0UVNaU0SdIs2JdVE`)
+
+  const response = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${song}`)
+  console.log(response);
   try {
 
     const brSpacing = document.createElement('br')
@@ -162,15 +165,19 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
     // selecting which parts of the lyrics we want to append to the DOM 
 
-    const lyrics = response.data.result.track.text
-    let firstLine = ''
-    for (i = a; i < b; i++) {
-      firstLine += lyrics[i]
-    }
-    let firstWord = ''
-    for (r = c; r < d; r++) {
-      firstWord += lyrics[r]
-    }
+    // const lyrics = response.data.result.track.text
+    const lyrics = lyricsFiller;
+
+    // let firstLine = ''
+    // for (i = a; i < b; i++) {
+    //   firstLine += lyrics[i]
+    // }
+    let firstLine = e;
+    // let firstWord = ''
+    // for (r = c; r < d; r++) {
+    //   firstWord += lyrics[r]
+    // }
+    let firstWord = f;
     const musicianObject = {
       prompt: firstLine + '...',
       correctAnswer: firstWord,
@@ -184,7 +191,7 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     divContainer.append(displayTitle)
 
     const displayGif = document.createElement('img')
-    displayGif.style.width = imageWidth;
+    displayGif.style.maxWidth = '70%';
     displayGif.setAttribute('src', gif)
     divContainer.append(displayGif)
 
@@ -377,49 +384,59 @@ for (c = 0; c < questionOrder.length; c++) {
 
   if (c === 0) {
 
-    finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, '450px', ['his photo collection', 'haircuts', 'paintings'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound0", "wrongSound0")
+    finishTheLyric('Beatles', 'Penny Lane', 0, 36, 37, 48, '450px', ['his photo collection', 'haircuts', 'paintings'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/SQFoY6QupT5V6/giphy.gif?cid=ecf05e47thqni4iz9zmuw8lwdmu9mwfpxfovg3sxrxc0na4n&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound0", "wrongSound0", `In Penny Lane there is a barber showing`,`photographs`)
   }
   else if (c === 1) {
-    finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, '400px', ['outrageous', `sagacious`, `cretaceous`], divOrder[questionOrder[c]], "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound1", "wrongSound1")
+    finishTheLyric('Nirvana', 'Smells Like Teen Spirit', 287, 334, 334, 345, '400px', ['outrageous', `sagacious`, `cretaceous`], divOrder[questionOrder[c]], "https://64.media.tumblr.com/8944ac37eb01f195b2f1c99634376830/tumblr_mhk457ePzS1rn29sdo1_500.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound1", "wrongSound1", `Here we are now, entertain us
+    I feel stupid and`,`contagious`)
   }
   else if (c === 2) {
-    finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, '450px', ['Westeros', 'Old Town Road', 'Westville Road'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif?cid=ecf05e4793d86e0ac4d7c3776f31f3445a8a54085c6ec850&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound2", "wrongSound2")
+    finishTheLyric('Drake', `God's Plan`, 539, 555, 556, 567, '450px', ['Westeros', 'Old Town Road', 'Westville Road'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif?cid=ecf05e4793d86e0ac4d7c3776f31f3445a8a54085c6ec850&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound2", "wrongSound2", `I finessed down`,`Weston Road`)
   }
   else if (c === 3) {
-    finishTheLyric('Bill Withers', `Lean On Me`, 259, 314, 314, 320, '350px', ['know', 'hide', 'steal'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound3", "wrongSound3")
+    finishTheLyric('Bill Withers', `Lean On Me`, 259, 314, 314, 320, '350px', ['know', 'hide', 'steal'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/xT1R9KovfllTplpkkM/giphy.gif?cid=ecf05e47svkyzsudcvb54rzaakenout5d3044ucktmytrary&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound3", "wrongSound3", `Please swallow your pride
+    If I have things you need to`,`borrow`)
   }
   else if (c === 4) {
-    finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, '450px', ['afford this', 'configure this', 'repair this'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound4", "wrongSound4")
+    finishTheLyric('Notorious B.I.G.', `Juicy`, 2534, 2601, 2602, 2614, '450px', ['afford this', 'configure this', 'repair this'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/AsDBIwyLjHc9G/giphy.gif?cid=ecf05e47nfxmozgja2q11hbcuuk9x47h0x4m6c0ojlx9v78v&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound4", "wrongSound4", `Super Nintendo, Sega Genesis
+    When I was dead broke, man, I couldn't`,`picture this`)
   }
   else if (c === 5) {
-    finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, '450px', ['riddles', 'French', 'stats'], divOrder[questionOrder[c]], "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound5", "wrongSound5")
+    finishTheLyric('Radiohead', `Karma Police`, 13, 42, 43, 49, '450px', ['riddles', 'French', 'stats'], divOrder[questionOrder[c]], "https://thumbs.gfycat.com/PoliticalAdmirableBird.webp", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound5", "wrongSound5", `Arrest this man
+    He talks in`,`maths`)
   }
   else if (c === 6) {
-    finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, '450px', ['fast Tango', 'waltz', 'flamenco'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound6", "wrongSound6")
+    finishTheLyric('Queen', `Bohemian Rhapsody`, 890, 966, 967, 975, '450px', ['fast Tango', 'waltz', 'flamenco'], divOrder[questionOrder[c]], "https://media4.giphy.com/media/YWlGAzJti8XIHamqKu/giphy.gif?cid=ecf05e476ilh3hbvzlfj4l354gwhcm6ag74x6f1vdg3hovtf&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound6", "wrongSound6", `Scaramouch, Scaramouch, will you do the`,`Fandango`)
   }
   else if (c === 7) {
-    finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, '450px', ['Yanni', 'TV', 'the Simpsons'], divOrder[questionOrder[c]], "https://i.gifer.com/MnQZ.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound7", "wrongSound7")
+    finishTheLyric('Nas', `The World Is Yours`, 336, 361, 362, 368, '450px', ['Yanni', 'TV', 'the Simpsons'], divOrder[questionOrder[c]], "https://i.gifer.com/MnQZ.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound7", "wrongSound7", `I sip the Dom P, watching `,`Gandhi`)
   }
   else if (c === 8) {
-    finishTheLyric('The White Stripes', `Seven Nation Army`, 208, 247, 248, 258, '450px', ['paywall', 'brain fog', 'riddle'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound8", "wrongSound8")
+    finishTheLyric('The White Stripes', `Seven Nation Army`, 208, 247, 248, 258, '450px', ['paywall', 'brain fog', 'riddle'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/8cSaoSQ9Wokcq3Qm51/giphy.gif?cid=ecf05e473b341herv7lvxkr071enz16u7blrxqvqt3mfs4j2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound8", "wrongSound8", `Back and forth through my mind
+    Behind a`,`cigarette`)
   }
   else if (c === 9) {
-    finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, '450px', ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound9", "wrongSound9")
+    finishTheLyric('Chris Stapleton', `Tennessee Whiskey`, 10, 42, 43, 50, '450px', ['library', 'jail cell', 'slump'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/BCe5xbtqwTh7NcmmR5/giphy.gif?cid=ecf05e470bb6e9f9f00a2666c21a87c05146b0085df4f6f9&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound9", "wrongSound9", `Used to spend my nights out in a`,`barroom`)
   }
   else if (c === 10) {
-    finishTheLyric('Bob Dylan', `Blowin' in the Wind`, 67, 130, 130, 135, '300px', ['blue whale', 'soft bed', 'nest'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/kpgzE7I82DNfO/giphy.gif?cid=ecf05e475h9l3cjbmyx4jfuto5pfhjh77hmjyp9whtkc3iuu&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound10", "wrongSound10")
+    finishTheLyric('Bob Dylan', `Blowin' in the Wind`, 67, 130, 130, 135, '300px', ['blue whale', 'soft bed', 'nest'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/kpgzE7I82DNfO/giphy.gif?cid=ecf05e475h9l3cjbmyx4jfuto5pfhjh77hmjyp9whtkc3iuu&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound10", "wrongSound10", `How many seas must a white dove sail
+    Before she sleeps in the`,`sand`)
   }
   else if (c === 11) {
-    finishTheLyric('Ed Sheeran', `Thinking Out Loud`, 833, 870, 870, 880, '450px', ['immortal', 'nonexistant', 'gold'], divOrder[questionOrder[c]], "https://media2.giphy.com/media/35yNLTW7Eba9ZuVtbh/giphy.gif?cid=ecf05e4756eff247fe03f8aa0d9d7065fc4a2aec39214b00&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound11", "wrongSound11")
+    finishTheLyric('Ed Sheeran', `Thinking Out Loud`, 833, 870, 870, 880, '450px', ['immortal', 'nonexistant', 'gold'], divOrder[questionOrder[c]], "https://media2.giphy.com/media/35yNLTW7Eba9ZuVtbh/giphy.gif?cid=ecf05e4756eff247fe03f8aa0d9d7065fc4a2aec39214b00&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound11", "wrongSound11", `Cause honey your soul can never grow old, it's`,`evergreen`)
   }
   else if (c === 12) {
-    finishTheLyric('Adele', `Rolling in the Deep`, 447, 484, 484, 495, '450px', ['bleeding', 'pained', 'drained'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/13vJHSyname1Hy/giphy.gif?cid=ecf05e475i7tkh57yz14gzd1fwmz4zabtoi8o85sweoe5l3p&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound12", "wrongSound12")
+    finishTheLyric('Adele', `Rolling in the Deep`, 447, 484, 484, 495, '450px', ['bleeding', 'pained', 'drained'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/13vJHSyname1Hy/giphy.gif?cid=ecf05e475i7tkh57yz14gzd1fwmz4zabtoi8o85sweoe5l3p&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound12", "wrongSound12", `The scars of your love, they leave me`,`breathless`)
   }
+  // else if (c === 13) {
+  //   finishTheLyric('Adele', `Rolling in the Deep`, 447, 484, 484, 495, '450px', ['bleeding', 'pained', 'drained'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/13vJHSyname1Hy/giphy.gif?cid=ecf05e475i7tkh57yz14gzd1fwmz4zabtoi8o85sweoe5l3p&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound12", "wrongSound12", "hi","hi")
+  // }
   else if (c === 13) {
-    finishTheLyric('Elvis Pressley', `Jailhouse Rock`, 45, 88, 88, 93, '450px', ['rock', 'fight', 'dance'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/2in9K8r6lnAPjPJNZt/giphy.gif?cid=ecf05e47zahlbq0nwwsrqe470oc2ltjs86eiswqxsedf7xn2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound13", "wrongSound13")
+    finishTheLyric('Elvis Pressley', `Jailhouse Rock`, 45, 88, 88, 93, '450px', ['rock', 'fight', 'dance'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/2in9K8r6lnAPjPJNZt/giphy.gif?cid=ecf05e47zahlbq0nwwsrqe470oc2ltjs86eiswqxsedf7xn2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound13", "wrongSound13", `The prison band was there, and they began to`,`wail`)
   }
   else {
-    finishTheLyric('Aretha Franklin', `Respect`, 92, 140, 140, 149, '450px', ['see me', 'hear me', 'get here'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/OjIM4Rgkv8gKj4KWku/giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound14", "wrongSound14")
+    finishTheLyric('Aretha Franklin', `Respect`, 92, 140, 140, 149, '450px', ['see me', 'hear me', 'get here'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/OjIM4Rgkv8gKj4KWku/giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound14", "wrongSound14", `All I'm askin'
+    (Oo) Is for a little respect when you`,`get home`)
   }
 }
 
