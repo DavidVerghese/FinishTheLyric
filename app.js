@@ -156,8 +156,8 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
     const brSpacing = document.createElement('br')
     divContainer.append(brSpacing)
-    const hrLine = document.createElement('hr')
-    divContainer.append(hrLine)
+    // const hrLine = document.createElement('hr')
+    // divContainer.append(hrLine)
     const answerResponse = document.createElement('p')
     answerResponse.innerText = ''
 

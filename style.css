@@ -1,22 +1,35 @@
 body {
-  background-color: #EDF5E1;
+  background-color: #f4decb;
+ 
+  color: #49274a;
+  
+
+  /* background-color: yellow; */
   text-align: center;
   font-size: 35px;
-  margin:0px;
-  font-family: 'Oswald', sans-serif;
+  margin: 0px;
+  /* font-family: 'Oswald', sans-serif; */
+  font-family: "Zen Dots", cursive;
 }
-
-
 
 footer {
-  background-color: #41B3A3;
+  /* background-color: #41B3A3; */
   height: 100px;
   margin: 0;
-  font-size:25px;
+  font-size: 25px;
 }
 header {
-  background-color: #E8A87C;
-  margin: 0px;
+  /* background-color: #E8A87C; */
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  padding: 0px;
+  /* color: #f28e8f; */
+  justify-content: space-around;
+  background-color: #94618e;
+  color: #F8EEE7;
+}
+header h3 {
+  /* text-shadow: 2px 2px; */
 }
 hr {
   height: 10px;
@@ -29,88 +42,82 @@ h2 {
 
 ul {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
 }
 li {
   list-style-position: inside;
   display: inline;
   height: 60px;
   justify-content: space-around;
-  background-color: #8860D0;
+  background-color: #8860d0;
   padding: 0px;
   margin: 0px;
 }
 
 li:hover {
   list-style-position: inside;
-  background-color: #C2B9B0;
+  background-color: #c2b9b0;
 }
 #attach li {
-  margin: 25px; 
+  margin: 25px;
 }
 
-
 #attach2 li {
-  margin: 5px; 
+  margin: 5px;
   background-color: #ff7f50;
 }
 
 #attach2 li:hover,
 #attach3 li:hover,
-#attach4 li:hover, 
+#attach4 li:hover,
 #attach5 li:hover,
 #attach6 li:hover,
 #attach7 li:hover,
 #attach8 li:hover,
 #attach9 li:hover,
-#attach10 li:hover
- {
-  background-color: #C2B9B0;
+#attach10 li:hover {
+  background-color: #c2b9b0;
   margin: 0px;
 }
 
 #attach3 li {
-  margin: 15px; 
+  margin: 15px;
   background-color: #379683;
 }
 
-
-
-
 #attach4 li {
-  margin: 25px; 
-  background-color: #E8A87C;
+  margin: 25px;
+  background-color: #e8a87c;
 }
 
-
 #attach5 li {
-  margin: 25px; 
-  background-color: #C38D;
+  margin: 25px;
+  background-color: #c38d;
 }
 
 #attach6 li {
-  margin: 25px; 
-  background-color: #D79922;
+  margin: 25px;
+  background-color: #d79922;
 }
 
 #attach7 li {
-  margin: 25px; 
-  background-color: #C5CBE3;
+  margin: 25px;
+  background-color: #c5cbe3;
 }
 
 #attach8 li {
-  margin: 25px; 
+  margin: 25px;
   background-color: #98ff98;
 }
 
 #attach9 li {
-  margin: 25px; 
-  background-color: #3AAFA9;
+  margin: 25px;
+  background-color: #3aafa9;
 }
 
 #attach10 li {
-  margin: 25px; 
-  background-color: #DA7B93;
+  margin: 25px;
+  background-color: #da7b93;
 }
 
 #attach11 li {
@@ -118,33 +125,46 @@ li:hover {
 }
 
 #attach12 li {
-  background-color: #E13113;
+  background-color: #e13113;
 }
 
 #attach13 li {
-  background-color: #00A9;
+  background-color: #00a9;
 }
 
 #attach14 li {
-  background-color: #DA7B93;
+  background-color: #da7b93;
 }
 
 #attach15 li {
-  background-color:#9932cc;
+  background-color: #9932cc;
 }
 
 img {
   padding: 0px;
+  outline: 5px solid black;
 }
 
 .next {
-  background-color: #659DBD;
+  background-color: #659dbd;
   font-size: 20px;
 }
 
-#q1Right, #q2Right, #q3Right, #q4Right, #q5Right,
-#q6Right, #q7Right, #q8Right, #q9Right, #q10Right, #q11Right, #q12Right,
-#q13Right, #q14Right, #q15Right  {
+#q1Right,
+#q2Right,
+#q3Right,
+#q4Right,
+#q5Right,
+#q6Right,
+#q7Right,
+#q8Right,
+#q9Right,
+#q10Right,
+#q11Right,
+#q12Right,
+#q13Right,
+#q14Right,
+#q15Right {
   font-size: 30px;
   color: green;
   float: left;
@@ -156,9 +176,21 @@ img {
   padding: 0px;
 }
 
-#q1Wrong, #q2Wrong, #q3Wrong, #q4Wrong, #q5Wrong,
-#q6Wrong, #q7Wrong, #q8Wrong, #q9Wrong, #q10Wrong, #q11Wrong, #q12Wrong, 
-#q13Wrong, #q14Wrong, #q15Wrong {
+#q1Wrong,
+#q2Wrong,
+#q3Wrong,
+#q4Wrong,
+#q5Wrong,
+#q6Wrong,
+#q7Wrong,
+#q8Wrong,
+#q9Wrong,
+#q10Wrong,
+#q11Wrong,
+#q12Wrong,
+#q13Wrong,
+#q14Wrong,
+#q15Wrong {
   font-size: 30px;
   float: right;
   display: none;
@@ -187,7 +219,7 @@ img {
   }
 } */
 
-@media only screen and (max-width: 550px){
+@media only screen and (max-width: 550px) {
   body {
     font-size: 20px;
   }
@@ -201,8 +233,8 @@ img {
   }
 }
 
- @media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px) {
   body {
     font-size: 23px;
   }
-} 
+}
