@@ -201,14 +201,27 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     displayTitle.innerText = (`${artist}, ${song}`)
     leftDiv.append(displayTitle)
 
-
+    const instructionsDiv = document.createElement('div');
+    instructionsDiv.setAttribute('class','instructions-div')
+    leftDiv.append(instructionsDiv);
+      
     const instruction = document.createElement('p')
-    instruction.innerText = `Finish the lyric: `
-    leftDiv.append(instruction)
+    instruction.innerText = `Finish the lyric: `;
+    instructionsDiv.append(instruction);
+
+    const wrongAnswerPic = document.createElement('img');
+    wrongAnswerPic.setAttribute('src', 'https://media0.giphy.com/media/JT7Td5xRqkvHQvTdEu/giphy.gif?cid=ecf05e472sn4rh3tsp6kigassffhy0lfmmqnzntr7qtlatpe&rid=giphy.gif&ct=g');
+    wrongAnswerPic.setAttribute('class', 'wronganswernodisplay');
+    instructionsDiv.append(wrongAnswerPic);
+
+    const rightAnswer = document.createElement('img');
+    rightAnswer.setAttribute('src', `https://media3.giphy.com/media/tf9jjMcO77YzV4YPwE/giphy.gif?cid=ecf05e47zytv3a9k3uz1smkjwccz2xcv2ubisicyds0xoq9h&rid=giphy.gif&ct=g`);
+    rightAnswer.setAttribute('class', 'rightanswernodisplay');
+    instructionsDiv.append(rightAnswer);
 
     const displayMusic = document.createElement('p')
     displayMusic.innerText = musicianObject.prompt
-    leftDiv.append(displayMusic);
+    instructionsDiv.append(displayMusic);
 
     const quiz = document.createElement('ul')
 
@@ -233,25 +246,32 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
         zeroAnswer.addEventListener("click", function () {
           // adding in the green border and check mark 
           // if the user picks the right answer
-          zeroAnswer.style.border = "10px solid green"
-          oneAnswer.style.border = "0px solid green"
-          twoAnswer.style.border = "0px solid green"
-          threeAnswer.style.border = "0px solid green"
+  
 
-          document.querySelector(id1).style.display = "inline"
-          document.querySelector(id2).style.display = "none"
+          // document.querySelector(id1).style.display = "inline"
+          // document.querySelector(id2).style.display = "none"
 
           // displaying text congratulating the user
           // on picking the right answer
-          instruction.innerText = 'Good job!'
-          instruction.style.color = 'green'
-          instruction.style.fontSize = '30px';
-          displayMusic.innerText = ''
+        
+        //  rightAnswer.setAttribute('class', 'rightanswerdisplay');
+         // wrongAnswerPic.setAttribute('class', 'wronganswernodisplay');
 
           // changing the score if the user picks the right answer
           if (clickValue === 0) {
             scoreValue = scoreValue + 1;
             scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/15`;
+
+            instruction.innerText = 'Good job!'
+            instruction.style.color = `lightgreen`
+            instruction.style.backgroundColor = ``
+            instruction.style.fontSize = '30px';
+            displayMusic.innerText = ''
+
+            zeroAnswer.style.border = "10px solid green"
+            oneAnswer.style.border = "0px solid green"
+            twoAnswer.style.border = "0px solid green"
+            threeAnswer.style.border = "0px solid green"
 
             clickValue += 1
 
@@ -270,11 +290,11 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
               finalRank.innerText = `Rank: ${rankValue}`;
             }
             else if (scoreValue > 10 & scoreValue < 13) {
-              let rankValue = 'Music lover'
+              let rankValue = 'Music connoisseur'
               finalRank.innerText = `Rank: ${rankValue}`;
             }
             else if (scoreValue > 13) {
-              let rankValue = 'Music god'
+              let rankValue = 'Music expert'
               finalRank.innerText = `Rank: ${rankValue}`;
             }
 
@@ -290,27 +310,41 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
           // adding in the red border and x mark 
           // if the user picks the wrong answer
 
-          oneAnswer.style.border = "10px solid red"
-          zeroAnswer.style.border = "0px solid green"
-          twoAnswer.style.border = "0px solid green"
-          threeAnswer.style.border = "0px solid green"
+       
 
-          document.querySelector(id2).style.display = "inline"
-          document.querySelector(id1).style.display = "none"
+          // document.querySelector(id2).style.display = "inline"
+          // document.querySelector(id1).style.display = "none"
 
           // display text correcting the user
 
-          instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          instruction.style.color = 'red'
-          instruction.style.fontSize = '30px';
-          displayMusic.innerText = ''
+      
+       //   wrongAnswerPic.setAttribute('class', 'wronganswerdisplay');
+        //  rightAnswer.setAttribute('class', 'rightanswernodisplay');
 
-          clickValue += 1
+        
 
-          // playing a buzzer sound if the user picks the wrong sound
+    
+
+          if (clickValue === 0) {
+            instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+            instruction.style.backgroundColor = `red`
+            instruction.style.color = `white`
+             instruction.style.fontSize = '30px';
+            displayMusic.innerText = ''
+            
+            oneAnswer.style.border = "10px solid red"
+            zeroAnswer.style.border = "0px solid green"
+            twoAnswer.style.border = "0px solid green"
+            threeAnswer.style.border = "0px solid green"
+
+            clickValue += 1
+
+                  // playing a buzzer sound if the user picks the wrong sound
           var wrongAnswerSound = document.getElementById(wrongSoundId);
           wrongAnswerSound.volume = 0.9;
           wrongAnswerSound.play();
+
+          }
 
         })
       }
@@ -319,24 +353,41 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
         quiz.append(twoAnswer)
         twoAnswer.addEventListener("click", function () {
 
-          twoAnswer.style.border = "10px solid red"
-          zeroAnswer.style.border = "0px solid green"
-          oneAnswer.style.border = "0px solid green"
-          threeAnswer.style.border = "0px solid green"
 
-          document.querySelector(id2).style.display = "inline"
-          document.querySelector(id1).style.display = "none"
 
-          instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          instruction.style.color = 'red'
-          instruction.style.fontSize = '30px';
-          displayMusic.innerText = ''
+          // document.querySelector(id2).style.display = "inline"
+          // document.querySelector(id1).style.display = "none"
 
-          clickValue += 1
+        //   instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+        //  // instruction.style.color = `#c67561`
+        //  instruction.style.color = `white`
+        //  instruction.style.backgroundColor = `red`
+        //   instruction.style.fontSize = '30px';
+        //   displayMusic.innerText = ''
+        //  wrongAnswerPic.setAttribute('class', 'wronganswerdisplay');
+        //  rightAnswer.setAttribute('class', 'rightanswernodisplay');
 
-          var wrongAnswerSound = document.getElementById(wrongSoundId);
-          wrongAnswerSound.volume = 0.9;
-          wrongAnswerSound.play();
+
+
+          if (clickValue === 0) {
+            instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+            instruction.style.backgroundColor = `red`
+            instruction.style.color = `white`
+             instruction.style.fontSize = '30px';
+            displayMusic.innerText = ''
+            
+            twoAnswer.style.border = "10px solid red"
+            zeroAnswer.style.border = "0px solid green"
+            oneAnswer.style.border = "0px solid green"
+            threeAnswer.style.border = "0px solid green"
+            
+            clickValue += 1
+
+            var wrongAnswerSound = document.getElementById(wrongSoundId);
+            wrongAnswerSound.volume = 0.9;
+            wrongAnswerSound.play();
+
+          }
 
         })
       }
@@ -345,38 +396,61 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
         quiz.append(threeAnswer)
         threeAnswer.addEventListener("click", function () {
 
-          threeAnswer.style.border = "10px solid red"
-          zeroAnswer.style.border = "0px solid green"
-          oneAnswer.style.border = "0px solid green"
-          twoAnswer.style.border = "0px solid green"
 
-          document.querySelector(id2).style.display = "inline"
-          document.querySelector(id1).style.display = "none"
 
-          instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          instruction.style.color = 'red'
-          instruction.style.fontSize = '30px';
-          displayMusic.innerText = ''
+          // document.querySelector(id2).style.display = "inline"
+          // document.querySelector(id1).style.display = "none"
 
-          clickValue += 1
+          // instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+          // // instruction.style.color = `#c67561`
+          // instruction.style.color = `white`
+          // instruction.style.fontSize = '30px';
+          // instruction.style.backgroundColor = `red`
+          // displayMusic.innerText = ''
+       //   wrongAnswerPic.setAttribute('class', 'wronganswerdisplay');
+         // rightAnswer.setAttribute('class', 'rightanswernodisplay');
 
-          var wrongAnswerSound = document.getElementById(wrongSoundId);
-          wrongAnswerSound.volume = 0.9;
-          wrongAnswerSound.play();
+  
+
+          if (clickValue === 0) {
+            instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
+            instruction.style.backgroundColor = `red`
+            instruction.style.color = `white`
+             instruction.style.fontSize = '30px';
+            displayMusic.innerText = ''
+            
+            threeAnswer.style.border = "10px solid red"
+            zeroAnswer.style.border = "0px solid green"
+            oneAnswer.style.border = "0px solid green"
+            twoAnswer.style.border = "0px solid green"
+
+            clickValue += 1
+
+            var wrongAnswerSound = document.getElementById(wrongSoundId);
+            wrongAnswerSound.volume = 0.9;
+            wrongAnswerSound.play();
+
+          }
         })
       }
     }
 
-    const wrongAnswer = document.createElement('img');
-    wrongAnswer.setAttribute('src', 'https://media0.giphy.com/media/JT7Td5xRqkvHQvTdEu/giphy.gif?cid=ecf05e472sn4rh3tsp6kigassffhy0lfmmqnzntr7qtlatpe&rid=giphy.gif&ct=g');
-    wrongAnswer.setAttribute('class', 'wronganswer');
-    leftDiv.append(wrongAnswer);
+    // const answersDiv = document.createElement('div');
+    // leftDiv.append(answersDiv);
 
+    // const wrongAnswerPic = document.createElement('img');
+    // wrongAnswerPic.setAttribute('src', 'https://media0.giphy.com/media/JT7Td5xRqkvHQvTdEu/giphy.gif?cid=ecf05e472sn4rh3tsp6kigassffhy0lfmmqnzntr7qtlatpe&rid=giphy.gif&ct=g');
+    // wrongAnswerPic.setAttribute('class', 'wronganswer');
+    // leftDiv.append(wrongAnswerPic);
+
+    // const wrongAnswerMessage = document.createElement('p');
+    // wrongAnswerMessage.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`;
+    // leftDiv.append(wrongAnswerMessage);
     
-    const rightAnswer = document.createElement('img');
-    rightAnswer.setAttribute('src', `https://media3.giphy.com/media/tf9jjMcO77YzV4YPwE/giphy.gif?cid=ecf05e47zytv3a9k3uz1smkjwccz2xcv2ubisicyds0xoq9h&rid=giphy.gif&ct=g`);
-    rightAnswer.setAttribute('class', 'rightanswer');
-    leftDiv.append(rightAnswer);
+    // const rightAnswer = document.createElement('img');
+    // rightAnswer.setAttribute('src', `https://media3.giphy.com/media/tf9jjMcO77YzV4YPwE/giphy.gif?cid=ecf05e47zytv3a9k3uz1smkjwccz2xcv2ubisicyds0xoq9h&rid=giphy.gif&ct=g`);
+    // rightAnswer.setAttribute('class', 'rightanswer');
+    // leftDiv.append(rightAnswer);
 
     const rightDiv = document.createElement('div');
     rightDiv.setAttribute('class', 'right-side-question');
