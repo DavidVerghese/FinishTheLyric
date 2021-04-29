@@ -108,8 +108,9 @@ function shuffle(list) {
 // creating the HTML elements for the scoreCounter section  
 let scoreValue = 0;
 let rankValue = 'music ignoramus'
-const scoreCounterBr = document.createElement('br');
-const scoreCounterHr = document.createElement('hr');
+// const scoreCounterBr = document.createElement('br');
+const finalScoreDiv = document.createElement('div');
+finalScoreDiv.setAttribute('class','final-score-div')
 const scoreCounter = document.createElement('h2');
 scoreCounter.innerText = `FINAL SCORE: ${scoreValue}/15`;
 const finalScoreAttacher = document.querySelector('#finalScore')
@@ -118,10 +119,23 @@ const finalScoreAttacher = document.querySelector('#finalScore')
 const finalRank = document.createElement('h2');
 finalRank.innerText = `Rank: ${rankValue}`;
 
-finalScoreAttacher.append(scoreCounterBr);
-finalScoreAttacher.append(scoreCounterHr);
-finalScoreAttacher.append(scoreCounter);
-finalScoreAttacher.append(finalRank);
+// finalScoreAttacher.append(scoreCounterBr);
+finalScoreAttacher.append(finalScoreDiv);
+const scoreGif = document.createElement('img')
+scoreGif.setAttribute('src', `https://media0.giphy.com/media/kfpWSG2GPyvwll8t6T/giphy.gif?cid=ecf05e47d0mbfsu934hdrhofs3kf935bhh1i4kn4kdcdxlgo&rid=giphy.gif&ct=g`)
+const finalScoreLeftDiv = document.createElement('div');
+finalScoreLeftDiv.setAttribute('class', 'final-score-left-div');
+const finalScoreRightDiv = document.createElement('div');
+finalScoreRightDiv.setAttribute('class', 'final-score-right-div');
+
+finalScoreDiv.append(finalScoreLeftDiv);
+finalScoreLeftDiv.append(scoreGif);
+
+finalScoreDiv.append(finalScoreRightDiv);
+finalScoreRightDiv.append(scoreCounter);
+finalScoreRightDiv.append(finalRank);
+
+
 
 // the function that creates the start screen 
 
@@ -286,16 +300,19 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
             // based on my personal ranking system 
 
             if (scoreValue > 5 & scoreValue < 10) {
-              let rankValue = 'Music plebian'
+              let rankValue = 'Music philistine'
               finalRank.innerText = `Rank: ${rankValue}`;
+              scoreGif.setAttribute('src', `https://media0.giphy.com/media/uKWE6qMrVOEEg/giphy.gif?cid=790b7611a798ba0faeeacc76eb3c9dde9f059a089ad71953&rid=giphy.gif&ct=g`)
             }
             else if (scoreValue > 10 & scoreValue < 13) {
               let rankValue = 'Music connoisseur'
               finalRank.innerText = `Rank: ${rankValue}`;
+              scoreGif.setAttribute('src', `https://media2.giphy.com/media/hD52jjb1kwmlO/giphy.gif?cid=ecf05e47h7x35p49n8lg3s9z0zfjnrnvq4a8wie0zn3g3m77&rid=giphy.gif&ct=g`);
             }
             else if (scoreValue > 13) {
               let rankValue = 'Music expert'
               finalRank.innerText = `Rank: ${rankValue}`;
+              scoreGif.setAttribute('src', `https://media4.giphy.com/media/l41lFj8afmWIo3yW4/giphy.gif?cid=ecf05e470x81ek0xix35pk5bx6kfavs5jas9lsuzjmr1mrj8&rid=giphy.gif&ct=g`);
             }
 
           }
