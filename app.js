@@ -141,7 +141,7 @@ const lyricsFiller = `Something in the way she moves Attracts me like no other l
 // the function that creates the ten questions 
 
 async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2, correctSoundId, wrongSoundId, e, f, questionNumber) {
-  console.log(artist, questionNumber);
+
   //getting the data from the API
   let clickValue = 0;
 
