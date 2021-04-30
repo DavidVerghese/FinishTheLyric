@@ -2,13 +2,9 @@ body {
   background-color: #f4decb;
  
   color: #49274a;
-  /* color: #c67561; */
-
-  /* background-color: yellow; */
   text-align: center;
   font-size: 35px;
   margin: 0px;
-  /* font-family: 'Oswald', sans-serif; */
   font-family: "Zen Dots", cursive;
 }
 #startScreen {
@@ -16,10 +12,6 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
-/* #attach,#attach2,#attach3,#attach4,#attach5,#attach6,#attach7,#attach8,#attach9,#attach10,#attach11,#attach12,#attach13,#attach14,#attach15 {
-  display: flex;
-  justify-content: center;
-} */
 .left {
   padding: 10px;
   height: 600px;
@@ -47,7 +39,6 @@ body {
 }
 .music {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: center;
   flex-direction: row;
   margin: 10px;
@@ -83,17 +74,14 @@ body {
 
 
 footer {
-  /* background-color: #41B3A3; */
   height: 100px;
   margin: 0;
   font-size: 25px;
 }
 header {
-  /* background-color: #E8A87C; */
   margin: 0px 0px 20px 0px;
   display: flex;
   padding: 0px;
-  /* color: #f28e8f; */
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: #94618e;
@@ -122,9 +110,7 @@ li {
   list-style-position: inside;
   display: inline;
   font-size: 15px;
-  /* height: 60px; */
   justify-content: space-around;
-  /* background-color: #8860d0; */
   background-color: rgb(245, 244, 224);
   color: black;
   padding: 10px;
@@ -133,7 +119,6 @@ li {
 
 li:hover {
   list-style-position: inside;
-  /* background-color: #c2b9b0; */
 }
 #attach {
   display: flex;
@@ -236,7 +221,6 @@ img {
     justify-content: center;
     width: 95%;
     margin: 10px;
-    /* background-color: red; */
   }
   .right {
     margin: 0px;
@@ -263,7 +247,6 @@ img {
     width: 80%;
     margin: 0px;
     padding: 0px;
-    /* margin-bottom: 10px; */
     box-shadow: none;
   }
   .right-side-question {
