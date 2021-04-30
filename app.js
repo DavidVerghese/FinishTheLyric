@@ -108,7 +108,6 @@ function shuffle(list) {
 // creating the HTML elements for the scoreCounter section  
 let scoreValue = 0;
 let rankValue = 'music ignoramus'
-// const scoreCounterBr = document.createElement('br');
 const finalScoreDiv = document.createElement('div');
 finalScoreDiv.setAttribute('class','final-score-div')
 const scoreCounter = document.createElement('h2');
@@ -119,11 +118,9 @@ const finalScoreAttacher = document.querySelector('#finalScore')
 const finalRank = document.createElement('h2');
 finalRank.innerText = `Rank: ${rankValue}`;
 
-// finalScoreAttacher.append(scoreCounterBr);
 finalScoreAttacher.append(finalScoreDiv);
 const scoreGif = document.createElement('img')
 scoreGif.setAttribute('src', `https://media0.giphy.com/media/kfpWSG2GPyvwll8t6T/giphy.gif?cid=ecf05e47d0mbfsu934hdrhofs3kf935bhh1i4kn4kdcdxlgo&rid=giphy.gif&ct=g`)
-//scoreGif.setAttribute('src', `https://media4.giphy.com/media/l41lFj8afmWIo3yW4/giphy.gif?cid=ecf05e470x81ek0xix35pk5bx6kfavs5jas9lsuzjmr1mrj8&rid=giphy.gif&ct=g`);
 const finalScoreLeftDiv = document.createElement('div');
 finalScoreLeftDiv.setAttribute('class', 'final-score-left-div');
 const finalScoreRightDiv = document.createElement('div');
@@ -138,21 +135,6 @@ finalScoreRightDiv.append(finalRank);
 
 
 
-// the function that creates the start screen 
-
-// function startScreen() {
-//   const displayGif = document.createElement('img')
-//   displayGif.setAttribute('src', `https://media2.giphy.com/media/l41lGtNHF5etg5B0Q/giphy.gif`)
-//   introScreen.append(displayGif)
-//   const introText = document.createElement('p')
-//   introText.innerText = `Are you ready to test your music trivia knowledge?`
-//   const introSecondLine = document.createElement('p')
-//   introSecondLine.innerText = `Scroll down to start`
-//   introSecondLine.style.fontSize = '28px';
-//   introSecondLine.style.fontStyle = 'italic';
-//   introScreen.append(introText)
-//   introScreen.append(introSecondLine)
-// }
 
 const lyricsFiller = `Something in the way she moves Attracts me like no other lover Something in the way she woos me I don't want to leave her now You know I believe her now Somewhere in her smile she knows That I don't need no other lover Something in her style that shows me Don't want to leave her now You know I believe her now You're asking me will my love grow I don't know, I don't know You stick around now it may show I don't know, I don't know Something in the way she knows And all I have to do is think of her Something in the things she shows me Don't want to leave her now You know I believe her now`;
 
@@ -169,10 +151,6 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
   // console.log(response);
   try {
 
-    // const brSpacing = document.createElement('br')
-    // divContainer.append(brSpacing)
-    // const hrLine = document.createElement('hr')
-    // divContainer.append(hrLine)
     const answerResponse = document.createElement('p')
     answerResponse.innerText = ''
 
@@ -259,18 +237,7 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
         zeroAnswer.innerText = musicianObject.correctAnswer
         quiz.append(zeroAnswer)
         zeroAnswer.addEventListener("click", function () {
-          // adding in the green border and check mark 
-          // if the user picks the right answer
-  
-
-          // document.querySelector(id1).style.display = "inline"
-          // document.querySelector(id2).style.display = "none"
-
-          // displaying text congratulating the user
-          // on picking the right answer
-        
-        //  rightAnswer.setAttribute('class', 'rightanswerdisplay');
-         // wrongAnswerPic.setAttribute('class', 'wronganswernodisplay');
+     
 
           // changing the score if the user picks the right answer
           if (clickValue === 0) {
@@ -324,21 +291,6 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
         oneAnswer.innerText = musicianObject.wrongAnswers[0]
         quiz.append(oneAnswer)
         oneAnswer.addEventListener("click", function () {
-
-          // adding in the red border and x mark 
-          // if the user picks the wrong answer
-
-       
-
-          // document.querySelector(id2).style.display = "inline"
-          // document.querySelector(id1).style.display = "none"
-
-          // display text correcting the user
-
-      
-       //   wrongAnswerPic.setAttribute('class', 'wronganswerdisplay');
-        //  rightAnswer.setAttribute('class', 'rightanswernodisplay');
-
         
 
     
@@ -373,19 +325,6 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
 
 
-          // document.querySelector(id2).style.display = "inline"
-          // document.querySelector(id1).style.display = "none"
-
-        //   instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-        //  // instruction.style.color = `#c67561`
-        //  instruction.style.color = `white`
-        //  instruction.style.backgroundColor = `red`
-        //   instruction.style.fontSize = '30px';
-        //   displayMusic.innerText = ''
-        //  wrongAnswerPic.setAttribute('class', 'wronganswerdisplay');
-        //  rightAnswer.setAttribute('class', 'rightanswernodisplay');
-
-
 
           if (clickValue === 0) {
             instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
@@ -416,17 +355,6 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
 
 
-          // document.querySelector(id2).style.display = "inline"
-          // document.querySelector(id1).style.display = "none"
-
-          // instruction.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`
-          // // instruction.style.color = `#c67561`
-          // instruction.style.color = `white`
-          // instruction.style.fontSize = '30px';
-          // instruction.style.backgroundColor = `red`
-          // displayMusic.innerText = ''
-       //   wrongAnswerPic.setAttribute('class', 'wronganswerdisplay');
-         // rightAnswer.setAttribute('class', 'rightanswernodisplay');
 
   
 
@@ -453,30 +381,14 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
       }
     }
 
-    // const answersDiv = document.createElement('div');
-    // leftDiv.append(answersDiv);
 
-    // const wrongAnswerPic = document.createElement('img');
-    // wrongAnswerPic.setAttribute('src', 'https://media0.giphy.com/media/JT7Td5xRqkvHQvTdEu/giphy.gif?cid=ecf05e472sn4rh3tsp6kigassffhy0lfmmqnzntr7qtlatpe&rid=giphy.gif&ct=g');
-    // wrongAnswerPic.setAttribute('class', 'wronganswer');
-    // leftDiv.append(wrongAnswerPic);
-
-    // const wrongAnswerMessage = document.createElement('p');
-    // wrongAnswerMessage.innerText = `Wrong! Correct answer: ${musicianObject.correctAnswer}`;
-    // leftDiv.append(wrongAnswerMessage);
-    
-    // const rightAnswer = document.createElement('img');
-    // rightAnswer.setAttribute('src', `https://media3.giphy.com/media/tf9jjMcO77YzV4YPwE/giphy.gif?cid=ecf05e47zytv3a9k3uz1smkjwccz2xcv2ubisicyds0xoq9h&rid=giphy.gif&ct=g`);
-    // rightAnswer.setAttribute('class', 'rightanswer');
-    // leftDiv.append(rightAnswer);
 
     const rightDiv = document.createElement('div');
     rightDiv.setAttribute('class', 'right-side-question');
 
     divContainer.append(rightDiv);
 
-    const displayGif = document.createElement('img')
-    // displayGif.style.maxWidth = '70%';
+    const displayGif = document.createElement('img');
     displayGif.setAttribute('src', gif)
     rightDiv.append(displayGif)
   }
@@ -499,7 +411,6 @@ const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong',
 // will the be the second question, musicDiv3 means it will be the third, etc)
 
 for (c = 0; c < questionOrder.length; c++) {
-  //console.log(questionOrder, c, questionOrder.indexOf(c));
   let questionOrderP = parentDivOrder.indexOf(divOrder[questionOrder[c]].parentElement)
   if (c === 0) {
 
@@ -547,9 +458,7 @@ for (c = 0; c < questionOrder.length; c++) {
   else if (c === 12) {
     finishTheLyric('Adele', `Rolling in the Deep`, 447, 484, 484, 495, '450px', ['bleeding', 'pained', 'drained'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/13vJHSyname1Hy/giphy.gif?cid=ecf05e475i7tkh57yz14gzd1fwmz4zabtoi8o85sweoe5l3p&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound12", "wrongSound12", `The scars of your love, they leave me`,`breathless`, questionOrderP)
   }
-  // else if (c === 13) {
-  //   finishTheLyric('Adele', `Rolling in the Deep`, 447, 484, 484, 495, '450px', ['bleeding', 'pained', 'drained'], divOrder[questionOrder[c]], "https://media1.giphy.com/media/13vJHSyname1Hy/giphy.gif?cid=ecf05e475i7tkh57yz14gzd1fwmz4zabtoi8o85sweoe5l3p&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound12", "wrongSound12", "hi","hi")
-  // }
+
   else if (c === 13) {
     finishTheLyric('Elvis Pressley', `Jailhouse Rock`, 45, 88, 88, 93, '450px', ['rock', 'fight', 'dance'], divOrder[questionOrder[c]], "https://media3.giphy.com/media/2in9K8r6lnAPjPJNZt/giphy.gif?cid=ecf05e47zahlbq0nwwsrqe470oc2ltjs86eiswqxsedf7xn2&rid=giphy.gif", rightAnswer[questionOrder[c]], wrongAnswer[questionOrder[c]], "correctSound13", "wrongSound13", `The prison band was there, and they began to`,`wail`, questionOrderP)
   }
