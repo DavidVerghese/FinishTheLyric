@@ -123,6 +123,7 @@ finalRank.innerText = `Rank: ${rankValue}`;
 finalScoreAttacher.append(finalScoreDiv);
 const scoreGif = document.createElement('img')
 scoreGif.setAttribute('src', `https://media0.giphy.com/media/kfpWSG2GPyvwll8t6T/giphy.gif?cid=ecf05e47d0mbfsu934hdrhofs3kf935bhh1i4kn4kdcdxlgo&rid=giphy.gif&ct=g`)
+//scoreGif.setAttribute('src', `https://media4.giphy.com/media/l41lFj8afmWIo3yW4/giphy.gif?cid=ecf05e470x81ek0xix35pk5bx6kfavs5jas9lsuzjmr1mrj8&rid=giphy.gif&ct=g`);
 const finalScoreLeftDiv = document.createElement('div');
 finalScoreLeftDiv.setAttribute('class', 'final-score-left-div');
 const finalScoreRightDiv = document.createElement('div');
