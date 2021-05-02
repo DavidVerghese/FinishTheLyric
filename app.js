@@ -141,7 +141,8 @@ const lyricsFiller = `Something in the way she moves Attracts me like no other l
 // the function that creates the ten questions 
 
 async function apiCall(artist,song) {
- // 
+  const response = await axios.get(`https://cratedigger2-api.herokuapp.com/samples`);
+  console.log(response);
 }
 apiCall("Beatles","Something");
 function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2, correctSoundId, wrongSoundId, e, f, questionNumber) {
