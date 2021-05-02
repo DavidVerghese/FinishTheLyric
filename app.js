@@ -140,7 +140,11 @@ const lyricsFiller = `Something in the way she moves Attracts me like no other l
 
 // the function that creates the ten questions 
 
-async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2, correctSoundId, wrongSoundId, e, f, questionNumber) {
+async function apiCall(artist,song) {
+ // 
+}
+apiCall("Beatles","Something");
+function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswersArray, divContainer, gif, id1, id2, correctSoundId, wrongSoundId, e, f, questionNumber) {
 
   //getting the data from the API
   let clickValue = 0;
@@ -149,7 +153,7 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
 
   //const response = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${song}`)
   // console.log(response);
-  try {
+  // try {
 
     const answerResponse = document.createElement('p')
     answerResponse.innerText = ''
@@ -391,10 +395,10 @@ async function finishTheLyric(artist, song, a, b, c, d, imageWidth, wrongAnswers
     const displayGif = document.createElement('img');
     displayGif.setAttribute('src', gif)
     rightDiv.append(displayGif)
-  }
-  catch (error) {
-    console.log("error!")
-  }
+  // }
+  // catch (error) {
+  //   console.log("error!")
+  // }
 }
 
 
