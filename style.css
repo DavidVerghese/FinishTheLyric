@@ -43,8 +43,6 @@ body {
   flex-direction: row;
   margin: 10px;
   width: 100%;
-  background-color: rgb(2, 2, 69);
-  box-shadow: 5px 10px rgb(65, 64, 64);
 }
 .left-side-question {
   background-color: #94618e;
