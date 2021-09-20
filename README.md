@@ -135,5 +135,9 @@ I initally had 'next' buttons. I wanted to make sure that only one question disp
 #### Modifying the shuffle function
 Another thing I had to modify was the function shuffle. I based this on the shuffle card function from the 'high_low game' homework. In my code, I used the shuffle to randomly place the multiple choice answers, so that the correct answer would be in a random position. However, I found that the correct anwser was usually in the third or fourth spot from the left, and never in the first spot from the left. I wasn't able to figure out why this was. However, I modified the function shuffle so that there is a 50% chance that the order of the questions will be reversed. This solved this problem.
 #### Taking out the sounds
-On the deployed site, https://davidverghese.github.io/FinishTheLyric/, the sounds that play for correct and wrong answers would occassionally glitch, and play multiple times. I aim to look deeper into this and fix this in the future, but for the time, I have taken out the sounds.
+On the deployed site, https://davidverghese.github.io/FinishTheLyric/, the sounds that play for correct and wrong answers would occassionally glitch, and play multiple times. I aim to look deeper into this and fix this in the future, but for the time, I have taken out the sounds in order to improve the user experience. 
+#### Changes to the design 
+I decided to make the design of this site more interesting, by incorporating overlapping images. 
+I also worked on responsiveness. The original design of this site did not work on smaller mobile screens such as the Galaxy Fold. The current design of the site is responsive for a wider array of screens.
+
 
