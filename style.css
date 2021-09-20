@@ -7,13 +7,13 @@ body {
   margin: 0px;
   font-family: "Zen Dots", cursive;
 }
-footer {
+/* footer {
   height: 100px;
   margin: 0;
   font-size: 25px;
-}
-header {
-  margin: 0px 0px 20px 0px;
+} */
+header, footer {
+  margin: 0px 0px 0px 0px;
   display: flex;
   padding: 0px;
   width: 100%;
@@ -56,6 +56,7 @@ li:hover {
   list-style-position: inside;
 }
 #startScreen {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;

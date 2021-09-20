@@ -8,7 +8,7 @@ I want to create a quiz where users guess the last word in a famous song lyric. 
 
 ## API and Data Sample
 
-I'm using this API: https://lyricsovh.docs.apiary.io/#
+I originally used this API: https://lyricsovh.docs.apiary.io/#
 
 ```json
 {
@@ -16,6 +16,7 @@ I'm using this API: https://lyricsovh.docs.apiary.io/#
 }
 
 ```
+
 
 ## Wireframes
 
@@ -66,12 +67,12 @@ The result:
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Nov 10| Project Approval | Incomplete
-|Nov 12| Core Application Structure (HTML, CSS, JS). Work on getting information from API. | Incomplete
-|Nov 13| Work on creating objects, and system of randomly selecting objects. | Incomplete
-|Nov 16| Finish MVP, get feedback from testers | Incomplete
-|Nov 17| Presentations | Incomplete
+|Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Nov 10| Project Approval | Complete
+|Nov 12| Core Application Structure (HTML, CSS, JS). Work on getting information from API. | Complete
+|Nov 13| Work on creating objects, and system of randomly selecting objects. | Complete
+|Nov 16| Finish MVP, get feedback from testers | Complete
+|Nov 17| Presentations | Complete
 
 ## Priority Matrix
 
@@ -97,6 +98,8 @@ The result:
 | Cleaning up the code | Moderate | 2hrs|1hr  |1hrs  |
 | Total | H | 36hrs|31hrs  |31hrs  |
 
+In 2021, I revisited this project. I changed the design of the site, worked on responsitivity, replaced the API with one that I had made myself (see the change log for more info), and refactored the code. This took approximately 14 days of work. 
+
 ## Code Snippet
 
 ```
@@ -112,10 +115,25 @@ The code above goes inside an event listener that reacts if the user clicks the 
 
 ## Change Log
 #### Changing the API
-I had to change the API I used. I initially used the 'lyrics.ovh' api [link](https://lyricsovh.docs.apiary.io/#). However, this API would only work the first time I called it. I initally thought I wasn't using the right protocol to access the API. However, I showed it to Stefon, who confirmed it was in fact a problem with the API. I switched to the 'Apiseeds' api [link](https://apiseeds.com/documentation/lyrics). This worked fine. 
+I had to change the API I used. I initially used the 'lyrics.ovh' api [link](https://lyricsovh.docs.apiary.io/#). However, this API would only work the first time I called it. I initally thought I wasn't using the right protocol to access the API. However, I showed it to Stefon, who confirmed it was in fact a problem with the API. I switched to the 'Apiseeds' api [link](https://apiseeds.com/documentation/lyrics). This worked fine at first.
+
+However, in 2021, this API went down. I decided to create my own API, which I deployed on heroku: https://finishthelyricbackend.herokuapp.com/api/lyrics
+
+```json
+{
+          "songTitle": "Jailhouse Rock",
+          "artist": "Elvis",
+          "lyric": "The prison band was there, and they began to",
+          "imageAddress": "https://media3.giphy.com/media/2in9K8r6lnAPjPJNZt/giphy.gif?cid=ecf05e47zahlbq0nwwsrqe470oc2ltjs86eiswqxsedf7xn2&rid=giphy.gif",
+        "answer": "wail",
+          "wrongAnswers": ["rock","fight","dance"]
+        }
+```
+
 #### Taking out the next button
 I initally had 'next' buttons. I wanted to make sure that only one question displayed at a time. The idea was that once the user clicked the 'next' button it would display a new question and remove the previous question. However, I realised that the game worked fine with all the questions on the same webpage.
 #### Modifying the shuffle function
 Another thing I had to modify was the function shuffle. I based this on the shuffle card function from the 'high_low game' homework. In my code, I used the shuffle to randomly place the multiple choice answers, so that the correct answer would be in a random position. However, I found that the correct anwser was usually in the third or fourth spot from the left, and never in the first spot from the left. I wasn't able to figure out why this was. However, I modified the function shuffle so that there is a 50% chance that the order of the questions will be reversed. This solved this problem.
-
+#### Taking out the sounds
+On the deployed site, https://davidverghese.github.io/FinishTheLyric/, the sounds that play for correct and wrong answers would occassionally glitch, and play multiple times. I aim to look deeper into this and fix this in the future, but for the time, I have taken out the sounds.
 

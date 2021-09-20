@@ -87,9 +87,6 @@ attach15.append(musicDiv15)
 function shuffle(list) {
   var shuffledList = list
   let currentIndex = list.length
-  let temporaryValue = null
-  let randomIndex = null
-  let i = 0;
   while (currentIndex != 0) {
     currentIndex -= 1
     let randomIndex = Math.floor(Math.random() * currentIndex)
@@ -243,9 +240,12 @@ function finishTheLyric( divContainer,  correctSoundId, wrongSoundId, questionNu
             // playing a sound if the user picks the right answer
             // based on a code from this Stack Overflow question 
             // https://stackoverflow.com/questions/29567580/play-a-beep-sound-on-button-click
-            var correctAnswerSound = document.getElementById(correctSoundId);
-            correctAnswerSound.volume = 0.6;
-            correctAnswerSound.play();
+            // I have templorarily disabled this feature as it is glitching 
+            // on the deployed site
+
+            // let correctAnswerSound = document.getElementById(correctSoundId);
+            // correctAnswerSound.volume = 0.6;
+            // correctAnswerSound.play();
 
             // displaying the user's rank 
             // based on my personal ranking system 
@@ -293,9 +293,11 @@ function finishTheLyric( divContainer,  correctSoundId, wrongSoundId, questionNu
             clickValue += 1
 
                   // playing a buzzer sound if the user picks the wrong sound
-          var wrongAnswerSound = document.getElementById(wrongSoundId);
-          wrongAnswerSound.volume = 0.9;
-          wrongAnswerSound.play();
+                     // I have templorarily disabled this feature as it is glitching 
+            // on the deployed site
+          // var wrongAnswerSound = document.getElementById(wrongSoundId);
+          // wrongAnswerSound.volume = 0.9;
+          // wrongAnswerSound.play();
 
           }
 
@@ -323,9 +325,9 @@ function finishTheLyric( divContainer,  correctSoundId, wrongSoundId, questionNu
             
             clickValue += 1
 
-            var wrongAnswerSound = document.getElementById(wrongSoundId);
-            wrongAnswerSound.volume = 0.9;
-            wrongAnswerSound.play();
+            // var wrongAnswerSound = document.getElementById(wrongSoundId);
+            // wrongAnswerSound.volume = 0.9;
+            // wrongAnswerSound.play();
 
           }
 
@@ -349,9 +351,9 @@ function finishTheLyric( divContainer,  correctSoundId, wrongSoundId, questionNu
 
             clickValue += 1
 
-            var wrongAnswerSound = document.getElementById(wrongSoundId);
-            wrongAnswerSound.volume = 0.9;
-            wrongAnswerSound.play();
+            // var wrongAnswerSound = document.getElementById(wrongSoundId);
+            // wrongAnswerSound.volume = 0.9;
+            // wrongAnswerSound.play();
 
           }
         })
