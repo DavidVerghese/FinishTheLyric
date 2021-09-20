@@ -8,7 +8,7 @@ I want to create a quiz where users guess the last word in a famous song lyric. 
 
 ## API and Data Sample
 
-I originally used this API: https://lyricsovh.docs.apiary.io/#
+I originally used this API: [link](https://lyricsovh.docs.apiary.io/#)
 
 ```json
 {
@@ -67,12 +67,12 @@ The result:
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Nov 9| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
-|Nov 10| Project Approval | Complete
-|Nov 12| Core Application Structure (HTML, CSS, JS). Work on getting information from API. | Complete
-|Nov 13| Work on creating objects, and system of randomly selecting objects. | Complete
-|Nov 16| Finish MVP, get feedback from testers | Complete
-|Nov 17| Presentations | Complete
+|Nov 9, 2020| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|Nov 10, 2020| Project Approval | Complete
+|Nov 12, 2020| Core Application Structure (HTML, CSS, JS). Work on getting information from API. | Complete
+|Nov 13, 2020| Work on creating objects, and system of randomly selecting objects. | Complete
+|Nov 16, 2020| Finish MVP, get feedback from testers | Complete
+|Nov 17, 2020| Presentations | Complete
 
 ## Priority Matrix
 
@@ -98,7 +98,7 @@ The result:
 | Cleaning up the code | Moderate | 2hrs|1hr  |1hrs  |
 | Total | H | 36hrs|31hrs  |31hrs  |
 
-In 2021, I revisited this project. I changed the design of the site, worked on responsitivity, replaced the API with one that I had made myself (see the change log for more info), and refactored the code. This took approximately 14 days of work. 
+In 2021, I revisited this project. I changed the design of the site, worked on responsitivity, replaced the API with one that I had made myself (see the change log for more info), and refactored the code. 
 
 ## Code Snippet
 
@@ -117,7 +117,7 @@ The code above goes inside an event listener that reacts if the user clicks the 
 #### Changing the API
 I had to change the API I used. I initially used the 'lyrics.ovh' api [link](https://lyricsovh.docs.apiary.io/#). However, this API would only work the first time I called it. I initally thought I wasn't using the right protocol to access the API. However, I showed it to Stefon, who confirmed it was in fact a problem with the API. I switched to the 'Apiseeds' api [link](https://apiseeds.com/documentation/lyrics). This worked fine at first.
 
-However, in 2021, this API went down. I decided to create my own API, which I deployed on heroku: https://finishthelyricbackend.herokuapp.com/api/lyrics
+However, in 2021, this API went down. I decided to create my own API, which I deployed on heroku: [link](https://finishthelyricbackend.herokuapp.com/api/lyrics)
 
 ```json
 {
@@ -135,9 +135,8 @@ I initally had 'next' buttons. I wanted to make sure that only one question disp
 #### Modifying the shuffle function
 Another thing I had to modify was the function shuffle. I based this on the shuffle card function from the 'high_low game' homework. In my code, I used the shuffle to randomly place the multiple choice answers, so that the correct answer would be in a random position. However, I found that the correct anwser was usually in the third or fourth spot from the left, and never in the first spot from the left. I wasn't able to figure out why this was. However, I modified the function shuffle so that there is a 50% chance that the order of the questions will be reversed. This solved this problem.
 #### Taking out the sounds
-On the deployed site, https://davidverghese.github.io/FinishTheLyric/, the sounds that play for correct and wrong answers would occassionally glitch, and play multiple times. I aim to look deeper into this and fix this in the future, but for the time, I have taken out the sounds in order to improve the user experience. 
+In 2021, I revisited this site, and noticed that on the deployed site, [link](https://davidverghese.github.io/FinishTheLyric/), the sounds that play for correct and wrong answers would occassionally glitch, and play multiple times. I aim to look deeper into this and fix this in the future, but for the time, I have taken out the sounds in order to improve the user experience. 
 #### Changes to the design 
-I decided to make the design of this site more interesting, by incorporating overlapping images. 
-I also worked on responsiveness. The original design of this site did not work on smaller mobile screens such as the Galaxy Fold. The current design of the site is responsive for a wider array of screens.
+In 2021, I decided to make the design of this site more interesting, by incorporating overlapping images. I also worked on increasing the responsiveness of the site. The original design of this site did not work on smaller mobile screens such as the Galaxy Fold. 
 
 
