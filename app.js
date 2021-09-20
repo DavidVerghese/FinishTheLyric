@@ -131,10 +131,6 @@ finalScoreRightDiv.append(scoreCounter);
 finalScoreRightDiv.append(finalRank);
 
 
-
-
-const lyricsFiller = `Something in the way she moves Attracts me like no other lover Something in the way she woos me I don't want to leave her now You know I believe her now Somewhere in her smile she knows That I don't need no other lover Something in her style that shows me Don't want to leave her now You know I believe her now You're asking me will my love grow I don't know, I don't know You stick around now it may show I don't know, I don't know Something in the way she knows And all I have to do is think of her Something in the things she shows me Don't want to leave her now You know I believe her now`;
-
 // the function that creates the ten questions 
 
 
@@ -381,7 +377,7 @@ const rightAnswer = ['#q1Right', '#q2Right', '#q3Right', '#q4Right', '#q5Right',
 const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong', '#q6Wrong', '#q7Wrong', '#q8Wrong', '#q9Wrong', '#q10Wrong', '#q11Wrong', '#q12Wrong', '#q13Wrong', '#q14Wrong', '#q15Wrong']
 
 
-// running each of the 10 functions, and assigning them to a random 
+// running each of the 15 questions, and assigning them to a random 
 // div (The div controls the position on the webpage. Eg musicDiv2 means it
 // will the be the second question, musicDiv3 means it will be the third, etc)
 
