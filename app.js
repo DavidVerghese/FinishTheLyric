@@ -1,6 +1,6 @@
 // Creating the divs that the questions will go inside of
 
-const introScreen = document.querySelector('#startScreen')
+const loadingAttach = document.querySelector('#loading-attach')
 
 const attach = document.querySelector('#attach')
 const musicDiv = document.createElement('div')
@@ -381,10 +381,24 @@ const wrongAnswer = ['#q1Wrong', '#q2Wrong', '#q3Wrong', '#q4Wrong', '#q5Wrong',
 // div (The div controls the position on the webpage. Eg musicDiv2 means it
 // will the be the second question, musicDiv3 means it will be the third, etc)
 
+function loading() {
+  const loadingDiv = document.createElement('div');
+  const loadingMessage = document.createElement('h4');
+  loadingMessage.innerText = 'Loading questions...'
+  const loadingGif = document.createElement('img');
+  loadingGif.setAttribute('src', 'https://media3.giphy.com/media/kUTME7ABmhYg5J3psM/giphy.gif?cid=ecf05e471n8b2ylesjld0m0by9czxvct1by9oics8ymoerab&rid=giphy.gif&ct=g');
+  loadingDiv.append(loadingMessage);
+  loadingDiv.append(loadingGif);
 
+  loadingAttach.append(loadingDiv);
+}
 
 async function getQuestions() {
-  const response = await axios.get(`https://finishthelyricbackend.herokuapp.com/api/lyrics`);
+  const response = await axios.get(`https://finishthelyricbackend.herokuapp.com/api/lyrics`).catch(function (error) {
+    loading();
+    finalScoreAttacher.style.display = "none";
+  });
+  // response ? loading() : null
   const data = response.data;
  
   for (c = 0; c < questionOrder.length; c++) {
