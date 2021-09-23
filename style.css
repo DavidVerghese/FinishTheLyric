@@ -1,18 +1,14 @@
 body {
   background-color: #f4decb;
- 
+
   color: #49274a;
   text-align: center;
   font-size: 35px;
   margin: 0px;
   font-family: "Zen Dots", cursive;
 }
-/* footer {
-  height: 100px;
-  margin: 0;
-  font-size: 25px;
-} */
-header, footer {
+header,
+footer {
   margin: 0px 0px 0px 0px;
   display: flex;
   padding: 0px;
@@ -20,7 +16,7 @@ header, footer {
   justify-content: center;
   flex-wrap: wrap;
   background-color: #94618e;
-  color: #F8EEE7;
+  color: #f8eee7;
 }
 header h3 {
   margin: 0px 15px 0px 15px;
@@ -55,33 +51,13 @@ li {
 li:hover {
   list-style-position: inside;
 }
-#startScreen {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.left {
-  padding: 10px;
-  height: 600px;
-  width: 50%;  
-}
-.left img {
-  width: 100%;
-}
-.right {
-  width: 50%;
-  height: 400px;
-  margin-left: -100px;
-  margin-top: 20px;
-  background-color: #2f3d3c;
-  color: white;
-  box-shadow: 5px 10px black;
-}
-.wronganswernodisplay, .rightanswernodisplay {
+
+.wronganswernodisplay,
+.rightanswernodisplay {
   display: none;
 }
-.wronganswerdisplay, .rightanswerdisplay {
+.wronganswerdisplay,
+.rightanswerdisplay {
   width: 70px;
   display: inline;
   box-shadow: 5px 10px black;
@@ -115,11 +91,9 @@ li:hover {
   width: 30%;
   margin-left: 20px;
   background-color: #f7ede4;
- 
+
   color: black;
 }
-
-
 
 #attach {
   display: flex;
@@ -145,7 +119,7 @@ img {
   width: 50%;
   margin: 20px;
 }
-.final-score-left-div img{
+.final-score-left-div img {
   width: 90%;
 }
 .final-score-right-div {
@@ -208,37 +182,29 @@ img {
   width: 50px;
   padding: 0px;
 }
-
-
+#startScreen {
+  margin: 10px;
+}
+#loading-attach img {
+  max-width: 400px;
+}
 
 @media only screen and (max-width: 1000px) {
   body {
     font-size: 23px;
   }
 }
+
 @media only screen and (max-width: 768px) {
-  #startScreen {
-    flex-direction: column;
-    justify-content: center;
-    width: 95%;
-    margin: 10px;
-  }
-  .right {
-    margin: 0px;
-    height: 100%;
-    width: 90%;
-    margin-top: -300px;
-  }
-  .left {
-    margin: 0px;
-    width: 90%;
-  }
+
+
+
   img {
     width: 90%;
   }
   .music {
     flex-direction: column;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     box-shadow: none;
     margin-left: 60px;
     font-size: 70%;
@@ -282,9 +248,6 @@ img {
     padding: 5px;
     margin: 5px;
   }
-  .right {
-    margin-top: -350px;
-  }
   .music {
     margin-left: 40px;
   }
@@ -292,11 +255,5 @@ img {
     margin: 10px;
     margin-top: -10px;
     margin-left: 0px;
-  }
-}
-@media only screen and (max-width: 400px) {
-
-  .right {
-    margin-top: -460px;
   }
 }
